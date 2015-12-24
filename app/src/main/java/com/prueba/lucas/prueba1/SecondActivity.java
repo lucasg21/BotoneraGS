@@ -4,12 +4,13 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 
-public class SecondActivity extends ActionBarActivity {
+public class SecondActivity extends AppCompatActivity {
     private MediaPlayer mPlayer;
     private int currentSong = 0;
 
@@ -56,11 +57,11 @@ public class SecondActivity extends ActionBarActivity {
             mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.udespelotudo);
             currentSong = R.raw.udespelotudo;
             // Defaults are always a good idea:
-        }   /*else if (number== 10) {
+        }   else if (number== 10) {
             mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.cipayo);
             currentSong = R.raw.cipayo;
             // Defaults are always a good idea:
-        }*/
+        }
         else {
             mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.como);
             currentSong = R.raw.como;
