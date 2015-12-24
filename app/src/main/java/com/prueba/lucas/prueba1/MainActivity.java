@@ -12,7 +12,7 @@ import android.widget.EditText;
 
 
 public class MainActivity extends ActionBarActivity {
-    Button b1,b2,b3,b4,b5,b6,b7,b8;
+    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10;
 
     public final static String EXTRA_MESSAGE = "com.prueba.lucas.prueba1.MESSAGE";
 
@@ -28,6 +28,8 @@ public class MainActivity extends ActionBarActivity {
         b6= (Button) findViewById(R.id.button6);
         b7= (Button) findViewById(R.id.button7);
         b8= (Button) findViewById(R.id.button8);
+        b9= (Button) findViewById(R.id.button9);
+        b10=(Button)findViewById(R.id.button10);
         this.createListeners();
     }
 
@@ -93,6 +95,16 @@ public class MainActivity extends ActionBarActivity {
         b8.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 startSecondActivity(8);
+            }
+        });
+        b9.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startSecondActivity(9);
+            }
+        });
+        b10.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startSecondActivity(10);
             }
         });
     }

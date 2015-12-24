@@ -1,16 +1,14 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal">
-        <!--style="@style/MyMaterialTheme"-->
 
         <TableRow
             android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="0.5">
+            android:layout_height="fill_parent">
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/nestor1"
                 android:id="@+id/button1"
@@ -19,10 +17,10 @@
                 android:layout_marginTop="19dp"
                 android:onClick="sendMessage"
                 android:layout_column="5"
-                android:layout_weight="0.5" />
+                android:layout_weight="1" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/comoprogresaste"
                 android:id="@+id/button6"
@@ -31,18 +29,17 @@
                 android:layout_marginTop="19dp"
                 android:onClick="sendMessage"
                 android:layout_column="6"
-                android:layout_weight="0.5" />
+                android:layout_weight="1" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="0dp"
             android:layout_height="fill_parent"
-            android:orientation="vertical"
-            android:layout_weight="0.5">
+            android:orientation="vertical">
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/nestor2"
                 android:id="@+id/button2"
@@ -51,10 +48,11 @@
                 android:layout_marginTop="19dp"
                 android:onClick="sendMessage"
                 android:layout_column="5"
-                android:layout_weight="0.5" />
+                android:layout_weight="1"
+                android:layout_gravity="start" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/rica"
                 android:id="@+id/button7"
@@ -63,17 +61,17 @@
                 android:layout_marginTop="19dp"
                 android:onClick="sendMessage"
                 android:layout_column="6"
-                android:layout_weight="0.5" />
+                android:layout_weight="1"
+                android:layout_gravity="start" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="0.5">
+            android:layout_height="fill_parent">
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/como"
                 android:id="@+id/button3"
@@ -82,10 +80,11 @@
                 android:layout_marginTop="19dp"
                 android:onClick="sendMessage"
                 android:layout_column="5"
-                android:layout_weight="0.5" />
+                android:layout_weight="1"
+                android:layout_gravity="start" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/hablesenor"
                 android:id="@+id/button8"
@@ -94,17 +93,17 @@
                 android:layout_marginTop="19dp"
                 android:onClick="sendMessage"
                 android:layout_column="5"
-                android:layout_weight="0.5" />
+                android:layout_weight="1"
+                android:layout_gravity="end" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="0.5">
+            android:layout_height="fill_parent">
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/marecoPorDios"
                 android:id="@+id/button4"
@@ -113,16 +112,29 @@
                 android:layout_marginTop="19dp"
                 android:onClick="sendMessage"
                 android:layout_column="5"
-                android:layout_weight="0" />
+                android:layout_weight="1"
+                android:layout_gravity="end" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/udesunpelotudo"
+                android:id="@+id/button9"
+                android:layout_marginLeft="19dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="19dp"
+                android:onClick="sendMessage"
+                android:layout_column="5"
+                android:layout_weight="1"
+                android:layout_gravity="end" />
         </TableRow>
 
         <TableRow
             android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="0.5">
+            android:layout_height="fill_parent">
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/perosenor"
                 android:id="@+id/button5"
@@ -130,6 +142,20 @@
                 android:layout_marginStart="19dp"
                 android:layout_marginTop="19dp"
                 android:onClick="sendMessage"
-                android:layout_column="5" />
+                android:layout_column="5"
+                android:layout_weight="1"
+                android:layout_gravity="start" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/cipayo"
+                android:id="@+id/button10"
+                android:layout_marginLeft="19dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="19dp"
+                android:onClick="sendMessage"
+                android:layout_column="5"
+                android:layout_weight="1"
+                android:layout_gravity="end" />
         </TableRow>
     </TableLayout>

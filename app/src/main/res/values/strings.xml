@@ -16,6 +16,8 @@
     <string name="rica">Rica rica, AMARGA</string>
     <string name="shareWhatsapp">Envialo por WhatsApp</string>
     <string name="hablesenor">Hable señor!</string>
+    <string name="udesunpelotudo">Pero usted es un pelotudo!</string>
+    <string name="cipayo">Sos un pelotudo y un cipayo</string>
     <string name="title_activity_display_message">My Message</string>
 
 </resources>

@@ -51,7 +51,17 @@ public class SecondActivity extends ActionBarActivity {
             mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.hablesenor);
             currentSong = R.raw.hablesenor;
             // Defaults are always a good idea:
-        } else {
+        }
+            else if (number== 9) {
+            mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.udespelotudo);
+            currentSong = R.raw.udespelotudo;
+            // Defaults are always a good idea:
+        }   else if (number== 10) {
+            mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.cipayo);
+            currentSong = R.raw.cipayo;
+            // Defaults are always a good idea:
+        }
+        else {
             mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.como);
             currentSong = R.raw.como;
 
