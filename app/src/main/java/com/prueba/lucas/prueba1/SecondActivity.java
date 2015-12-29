@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.io.File;
+
 
 public class SecondActivity extends AppCompatActivity {
     private MediaPlayer mPlayer;
@@ -130,9 +132,47 @@ public class SecondActivity extends AppCompatActivity {
     private void startShare(int songID){
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("android.resource://" +this.getPackageName() + "/" + R.raw.pordios));
+        int audioID= getSong(songID);
+        sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("android.resource://" +this.getPackageName() + "/" + audioID));
         sendIntent.setType("audio/*");
         sendIntent.setPackage("com.whatsapp");
         startActivity(sendIntent);
+    }
+    private int getSong(int id){
+        int nameId;
+        nameId=0;
+        switch(id) {
+            case 1:
+                nameId = R.raw.nestoresta;
+                break;
+            case 2:
+                nameId=R.raw.nestormorir;
+                break;
+            case 3:
+                nameId=R.raw.como;
+                break;
+            case 4:
+                nameId=R.raw.pordios;
+                break;
+            case 5:
+                nameId=R.raw.perosenor;
+                break;
+            case 6:
+                nameId=R.raw.comoprogresaste;
+                break;
+            case 7:
+                nameId=R.raw.ricaamarga;
+                break;
+            case 8:
+                nameId=R.raw.hablesenor;
+                break;
+            case 9:
+                nameId=R.raw.udespelotudo;
+                break;
+            case 10:
+                nameId=R.raw.cipayo;
+                break;
+        }
+        return nameId;
     }
 }
