@@ -2,25 +2,30 @@ package com.prueba.lucas.prueba1;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
 public class SecondActivity extends AppCompatActivity {
     private MediaPlayer mPlayer;
     private int currentSong = 0;
+    Button whatsappShare;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+        whatsappShare=(Button) findViewById(R.id.whatsappBtn);
         Intent intent = getIntent();
         int number = intent.getIntExtra("BUTTON NUMBER", 1);
-
+        this.createListener(number);
         /*TextView tv = (TextView) findViewById(R.id.textView);
         tv.setText(String.valueOf(number));*/
 
@@ -114,5 +119,20 @@ public class SecondActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    private void createListener(final int fileNumber){
+        whatsappShare.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startShare(fileNumber);
+            }
+        });
+    }
+    private void startShare(int songID){
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("android.resource://" +this.getPackageName() + "/" + R.raw.pordios));
+        sendIntent.setType("audio/*");
+        sendIntent.setPackage("com.whatsapp");
+        startActivity(sendIntent);
     }
 }

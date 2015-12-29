@@ -29,7 +29,7 @@ public class MainActivity extends ActionBarActivity {
         b7= (Button) findViewById(R.id.button7);
         b8= (Button) findViewById(R.id.button8);
         b9= (Button) findViewById(R.id.button9);
-        b10=(Button)findViewById(R.id.button10);
+        b10=(Button) findViewById(R.id.button10);
         this.createListeners();
     }
 
@@ -57,6 +57,11 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void createListeners(){
+        b1.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startSecondActivity(1);
+            }
+        });
         b2.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 startSecondActivity(2);
@@ -70,11 +75,6 @@ public class MainActivity extends ActionBarActivity {
         b4.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 startSecondActivity(4);
-            }
-        });
-        b1.setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
-                startSecondActivity(1);
             }
         });
         b5.setOnClickListener(new OnClickListener() {
