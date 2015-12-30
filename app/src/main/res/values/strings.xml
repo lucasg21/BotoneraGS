@@ -18,6 +18,8 @@
     <string name="hablesenor">Hable señor!</string>
     <string name="udesunpelotudo">Pero usted es un pelotudo!</string>
     <string name="cipayo">Sos un pelotudo y un cipayo</string>
+    <string name="dequehabla">No se de que habla</string>
+    <string name="otrodia">Otro día hablamos</string>
     <string name="title_activity_display_message">My Message</string>
 
 </resources>

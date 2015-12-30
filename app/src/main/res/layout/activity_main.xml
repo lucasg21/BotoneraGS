@@ -161,4 +161,35 @@
                 android:layout_weight="1"
                 android:layout_gravity="end" />
         </TableRow>
-    </TableLayout>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/dequehabla"
+            android:id="@+id/button11"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:onClick="sendMessage"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:layout_gravity="start" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/otrodia"
+            android:id="@+id/button12"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:onClick="sendMessage"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:layout_gravity="end" />
+    </TableRow>
+
+</TableLayout>

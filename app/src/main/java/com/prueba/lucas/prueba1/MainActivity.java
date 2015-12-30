@@ -12,7 +12,7 @@ import android.widget.EditText;
 
 
 public class MainActivity extends ActionBarActivity {
-    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10;
+    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12;
 
     public final static String EXTRA_MESSAGE = "com.prueba.lucas.prueba1.MESSAGE";
 
@@ -30,6 +30,8 @@ public class MainActivity extends ActionBarActivity {
         b8= (Button) findViewById(R.id.button8);
         b9= (Button) findViewById(R.id.button9);
         b10=(Button) findViewById(R.id.button10);
+        b11=(Button) findViewById(R.id.button11);
+        b12=(Button) findViewById(R.id.button12);
         this.createListeners();
     }
 
@@ -107,6 +109,16 @@ public class MainActivity extends ActionBarActivity {
                 startSecondActivity(10);
             }
         });
+        b11.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startSecondActivity(11);
+            }
+        });
+        b12.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startSecondActivity(12);
+            }
+        });
     }
 
     private void startSecondActivity(int buttonNum) {
@@ -119,7 +131,7 @@ public class MainActivity extends ActionBarActivity {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         //EditText editText = (EditText) findViewById(R.id.edit_message);
         //String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, "Ehh wacho.");
+        //intent.putExtra(EXTRA_MESSAGE, "Ehh wacho.");
         startActivity(intent);
     }
 }

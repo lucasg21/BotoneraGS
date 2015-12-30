@@ -12,8 +12,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.io.File;
-
 
 public class SecondActivity extends AppCompatActivity {
     private MediaPlayer mPlayer;
@@ -68,6 +66,14 @@ public class SecondActivity extends AppCompatActivity {
             mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.cipayo);
             currentSong = R.raw.cipayo;
             // Defaults are always a good idea:
+        }
+            else if (number==11){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.dequehabla);
+            currentSong= R.raw.dequehabla;
+        }
+            else if (number==12){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.otrodia);
+            currentSong=R.raw.otrodia;
         }
         else {
             mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.como);
@@ -171,6 +177,12 @@ public class SecondActivity extends AppCompatActivity {
                 break;
             case 10:
                 nameId=R.raw.cipayo;
+                break;
+            case 11:
+                nameId=R.raw.dequehabla;
+                break;
+            case 12:
+                nameId=R.raw.otrodia;
                 break;
         }
         return nameId;
