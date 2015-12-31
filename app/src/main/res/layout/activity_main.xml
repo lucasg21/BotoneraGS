@@ -1,4 +1,9 @@
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+<TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -193,14 +198,43 @@
     </TableRow>
 
     <TableRow
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cachetes"
+        android:id="@+id/button13"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="19dp"
+        android:onClick="sendMessage"
+        android:layout_column="0"
+        android:layout_weight="1"
+        android:layout_gravity="start" />
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/travesti"
+        android:id="@+id/button14"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="19dp"
+        android:onClick="sendMessage"
+        android:layout_column="1"
+        android:layout_weight="1"
+        android:layout_gravity="end" />
+</TableRow>
+    <TableRow
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/cachetes"
-            android:id="@+id/button13"
+            android:text="@string/gordomerquero"
+            android:id="@+id/button15"
             android:layout_marginLeft="19dp"
             android:layout_marginStart="19dp"
             android:layout_marginTop="19dp"
@@ -211,8 +245,37 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/travesti"
-            android:id="@+id/button14"
+            android:text="@string/eueeue"
+            android:id="@+id/button16"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:onClick="sendMessage"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:layout_gravity="end" />
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/luppi"
+            android:id="@+id/button17"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:onClick="sendMessage"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:layout_gravity="start" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/milcasos"
+            android:id="@+id/button18"
             android:layout_marginLeft="19dp"
             android:layout_marginStart="19dp"
             android:layout_marginTop="19dp"
@@ -223,3 +286,4 @@
     </TableRow>
 
 </TableLayout>
+</ScrollView>

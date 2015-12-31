@@ -52,20 +52,16 @@ public class SecondActivity extends AppCompatActivity {
         } else if (number== 7) {
             mPlayer= MediaPlayer.create(SecondActivity.this,R.raw.ricaamarga);
             currentSong=R.raw.ricaamarga;
-            // Defaults are always a good idea:
         }   else if (number== 8) {
             mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.hablesenor);
             currentSong = R.raw.hablesenor;
-            // Defaults are always a good idea:
         }
             else if (number== 9) {
             mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.udespelotudo);
             currentSong = R.raw.udespelotudo;
-            // Defaults are always a good idea:
         }   else if (number== 10) {
             mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.cipayo);
             currentSong = R.raw.cipayo;
-            // Defaults are always a good idea:
         }
             else if (number==11){
             mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.dequehabla);
@@ -83,10 +79,28 @@ public class SecondActivity extends AppCompatActivity {
             mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.gordotravesti);
             currentSong=R.raw.gordotravesti;
         }
+        else if (number==15){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.gordomerquero);
+            currentSong=R.raw.gordomerquero;
+            /*TODO:mejorar audio*/
+        }
+        else if (number==16){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.eueeue);
+            currentSong=R.raw.eueeue;
+        }
+        else if (number==17){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.luppi);
+            currentSong=R.raw.luppi;
+            /*TODO:mejorar audio luppi*/
+        }
+        else if (number==18){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.milcasos);
+            currentSong=R.raw.milcasos;
+        }
+        // Defaults are always a good idea:
         else {
             mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.como);
             currentSong = R.raw.como;
-
         }
 
         mPlayer.start();
@@ -197,6 +211,12 @@ public class SecondActivity extends AppCompatActivity {
                 break;
             case 14:
                 nameId=R.raw.gordotravesti;
+                break;
+            case 15:
+                nameId=R.raw.gordomerquero;
+                break;
+            case 16:
+                nameId=R.raw.eueeue;
                 break;
         }
         return nameId;
