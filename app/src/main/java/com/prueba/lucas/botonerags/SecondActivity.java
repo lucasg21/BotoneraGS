@@ -71,32 +71,79 @@ public class SecondActivity extends AppCompatActivity {
             mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.otrodia);
             currentSong=R.raw.otrodia;
         }
-        else if (number==13){
+            else if (number==13){
             mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.cachetes);
             currentSong=R.raw.cachetes;
         }
-        else if (number==14){
+            else if (number==14){
             mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.gordotravesti);
             currentSong=R.raw.gordotravesti;
         }
-        else if (number==15){
+            else if (number==15){
             mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.gordomerquero);
             currentSong=R.raw.gordomerquero;
-            /*TODO:mejorar audio*/
         }
-        else if (number==16){
+            else if (number==16){
             mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.eueeue);
             currentSong=R.raw.eueeue;
         }
-        else if (number==17){
+            else if (number==17){
             mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.luppi);
             currentSong=R.raw.luppi;
-            /*TODO:mejorar audio luppi*/
         }
-        else if (number==18){
+            else if (number==18){
             mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.milcasos);
             currentSong=R.raw.milcasos;
         }
+            else if (number==19){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.enelaire);
+            currentSong=R.raw.enelaire;
+        }
+            else if (number==20){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.negros43);
+            currentSong=R.raw.negros43;
+        }
+            else if (number==21){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.comosenor);
+            currentSong=R.raw.comosenor;
+        }
+            else if (number==22){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.memelaspelotas);
+            currentSong=R.raw.memelaspelotas;
+        }
+            else if (number==23){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.familiapelotudos);
+            currentSong=R.raw.familiapelotudos;
+        }
+            else if (number==24){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.genteadentro);
+            currentSong=R.raw.genteadentro;
+        }
+            else if (number==25){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.noteaguanto);
+            currentSong=R.raw.noteaguanto;
+        }
+            else if (number==26){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.boludopelotudo);
+            currentSong=R.raw.boludopelotudo;
+        }
+            else if (number==27){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.sevennegras);
+            currentSong=R.raw.sevennegras;
+        }
+            else if (number==28){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.negroindigena);
+            currentSong=R.raw.negroindigena;
+        }
+            else if (number==29){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.loco);
+            currentSong=R.raw.loco ;
+        }
+            else if (number==30){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.pelotudofresco);
+            currentSong=R.raw.pelotudofresco;
+        }
+
         // Defaults are always a good idea:
         else {
             mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.como);
@@ -217,6 +264,48 @@ public class SecondActivity extends AppCompatActivity {
                 break;
             case 16:
                 nameId=R.raw.eueeue;
+                break;
+            case 17:
+                nameId=R.raw.luppi;
+                break;
+            case 18:
+                nameId=R.raw.milcasos;
+                break;
+            case 19:
+                nameId=R.raw.enelaire;
+                break;
+            case 20:
+                nameId=R.raw.negros43;
+                break;
+            case 21:
+                nameId=R.raw.comosenor;
+                break;
+            case 22:
+                nameId=R.raw.memelaspelotas;
+                break;
+            case 23:
+                nameId=R.raw.familiapelotudos;
+                break;
+            case 24:
+                nameId=R.raw.genteadentro;
+                break;
+            case 25:
+                nameId=R.raw.noteaguanto;
+                break;
+            case 26:
+                nameId=R.raw.boludopelotudo;
+                break;
+            case 27:
+                nameId=R.raw.sevennegras;
+                break;
+            case 28:
+                nameId=R.raw.negroindigena;
+                break;
+            case 29:
+                nameId=R.raw.loco;
+                break;
+            case 30:
+                nameId=R.raw.pelotudofresco;
                 break;
         }
         return nameId;

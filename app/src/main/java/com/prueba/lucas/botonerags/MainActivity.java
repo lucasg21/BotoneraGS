@@ -12,7 +12,7 @@ import android.widget.EditText;
 
 
 public class MainActivity extends ActionBarActivity {
-    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,b18;
+    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,b18,b19,b20,b21,b22,b23,b24,b25,b26,b27,b28,b29,b30;
 
     public final static String EXTRA_MESSAGE = "com.prueba.lucas.prueba1.MESSAGE";
 
@@ -38,6 +38,18 @@ public class MainActivity extends ActionBarActivity {
         b16=(Button) findViewById(R.id.button16);
         b17=(Button) findViewById(R.id.button17);
         b18=(Button) findViewById(R.id.button18);
+        b19=(Button) findViewById(R.id.button19);
+        b20=(Button) findViewById(R.id.button20);
+        b21=(Button) findViewById(R.id.button21);
+        b22=(Button) findViewById(R.id.button22);
+        b23=(Button) findViewById(R.id.button23);
+        b24=(Button) findViewById(R.id.button24);
+        b25=(Button) findViewById(R.id.button25);
+        b26=(Button) findViewById(R.id.button26);
+        b27=(Button) findViewById(R.id.button27);
+        b28=(Button) findViewById(R.id.button28);
+        b29=(Button) findViewById(R.id.button29);
+        b30=(Button) findViewById(R.id.button30);
         this.createListeners();
     }
 
@@ -153,6 +165,66 @@ public class MainActivity extends ActionBarActivity {
         b18.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 startSecondActivity(18);
+            }
+        });
+        b19.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startSecondActivity(19);
+            }
+        });
+        b20.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startSecondActivity(20);
+            }
+        });
+        b21.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startSecondActivity(21);
+            }
+        });
+        b22.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startSecondActivity(22);
+            }
+        });
+        b23.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startSecondActivity(23);
+            }
+        });
+        b24.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startSecondActivity(24);
+            }
+        });
+        b25.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startSecondActivity(25);
+            }
+        });
+        b26.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startSecondActivity(26);
+            }
+        });
+        b27.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startSecondActivity(27);
+            }
+        });
+        b28.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startSecondActivity(28);
+            }
+        });
+        b29.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startSecondActivity(29);
+            }
+        });
+        b30.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startSecondActivity(30);
             }
         });
     }
