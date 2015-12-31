@@ -54,7 +54,7 @@
 
             <Button
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:drawableTop="@drawable/tresempanadasicon"
                 android:background="@android:color/transparent"
                 android:textSize="15sp"
