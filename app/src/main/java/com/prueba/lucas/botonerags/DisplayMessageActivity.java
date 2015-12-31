@@ -1,9 +1,8 @@
-package com.prueba.lucas.prueba1;
+package com.prueba.lucas.botonerags;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 

@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.prueba.lucas.prueba1"
+        applicationId "com.prueba.lucas.botonerags"
         minSdkVersion 8
         targetSdkVersion 23
         versionCode 1

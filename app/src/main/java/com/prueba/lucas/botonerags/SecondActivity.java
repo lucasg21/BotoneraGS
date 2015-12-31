@@ -1,4 +1,4 @@
-package com.prueba.lucas.prueba1;
+package com.prueba.lucas.botonerags;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -74,6 +74,14 @@ public class SecondActivity extends AppCompatActivity {
             else if (number==12){
             mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.otrodia);
             currentSong=R.raw.otrodia;
+        }
+        else if (number==13){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.cachetes);
+            currentSong=R.raw.cachetes;
+        }
+        else if (number==14){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.gordotravesti);
+            currentSong=R.raw.gordotravesti;
         }
         else {
             mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.como);
@@ -183,6 +191,12 @@ public class SecondActivity extends AppCompatActivity {
                 break;
             case 12:
                 nameId=R.raw.otrodia;
+                break;
+            case 13:
+                nameId=R.raw.cachetes;
+                break;
+            case 14:
+                nameId=R.raw.gordotravesti;
                 break;
         }
         return nameId;

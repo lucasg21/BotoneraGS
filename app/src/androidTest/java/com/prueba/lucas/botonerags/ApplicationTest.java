@@ -1,4 +1,4 @@
-package com.prueba.lucas.prueba1;
+package com.prueba.lucas.botonerags;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

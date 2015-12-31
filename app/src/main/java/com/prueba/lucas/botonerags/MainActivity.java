@@ -1,4 +1,4 @@
-package com.prueba.lucas.prueba1;
+package com.prueba.lucas.botonerags;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -12,7 +12,7 @@ import android.widget.EditText;
 
 
 public class MainActivity extends ActionBarActivity {
-    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12;
+    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14;
 
     public final static String EXTRA_MESSAGE = "com.prueba.lucas.prueba1.MESSAGE";
 
@@ -32,6 +32,8 @@ public class MainActivity extends ActionBarActivity {
         b10=(Button) findViewById(R.id.button10);
         b11=(Button) findViewById(R.id.button11);
         b12=(Button) findViewById(R.id.button12);
+        b13=(Button) findViewById(R.id.button13);
+        b14=(Button) findViewById(R.id.button14);
         this.createListeners();
     }
 
@@ -117,6 +119,16 @@ public class MainActivity extends ActionBarActivity {
         b12.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 startSecondActivity(12);
+            }
+        });
+        b13.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startSecondActivity(13);
+            }
+        });
+        b14.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startSecondActivity(14);
             }
         });
     }
