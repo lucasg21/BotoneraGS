@@ -2,13 +2,13 @@ package com.prueba.lucas.botonerags;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -17,12 +17,19 @@ import com.google.android.gms.ads.AdView;
 public class MainActivity extends ActionBarActivity {
     Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,b18,b19,b20,b21,b22,b23,b24,b25,b26,b27,b28,b29,b30;
 
-    public final static String EXTRA_MESSAGE = "com.prueba.lucas.prueba1.MESSAGE";
+    public final static String EXTRA_MESSAGE = "com.prueba.lucas.botonerags.MESSAGE";
+    private Toolbar mToolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         b1 =(Button) findViewById(R.id.button1);
         b2= (Button) findViewById(R.id.button2);
         b3= (Button) findViewById(R.id.button3);
