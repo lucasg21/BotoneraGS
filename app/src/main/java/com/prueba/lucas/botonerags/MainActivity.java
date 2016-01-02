@@ -15,7 +15,7 @@ import com.google.android.gms.ads.AdView;
 
 
 public class MainActivity extends ActionBarActivity {
-    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,b18,b19,b20,b21,b22,b23,b24,b25,b26,b27,b28,b29,b30;
+    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,b18,b19,b20,b21,b22,b23,b24,b25,b26,b27,b28,b29,b30,b31,b32;
 
     public final static String EXTRA_MESSAGE = "com.prueba.lucas.botonerags.MESSAGE";
     private Toolbar mToolbar;
@@ -29,6 +29,7 @@ public class MainActivity extends ActionBarActivity {
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        /*TODO:ver que hace este llamado y porque puede producir NullPointerException*/
 
         b1 =(Button) findViewById(R.id.button1);
         b2= (Button) findViewById(R.id.button2);
@@ -60,6 +61,8 @@ public class MainActivity extends ActionBarActivity {
         b28=(Button) findViewById(R.id.button28);
         b29=(Button) findViewById(R.id.button29);
         b30=(Button) findViewById(R.id.button30);
+        b31=(Button) findViewById(R.id.button31);
+        b32=(Button) findViewById(R.id.button32);
         this.createListeners();
 
         AdView mAdView = (AdView) findViewById(R.id.adView);
@@ -239,6 +242,16 @@ public class MainActivity extends ActionBarActivity {
         b30.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 startSecondActivity(30);
+            }
+        });
+        b31.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startSecondActivity(31);
+            }
+        });
+        b32.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startSecondActivity(32);
             }
         });
     }

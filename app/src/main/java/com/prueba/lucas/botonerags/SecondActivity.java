@@ -143,6 +143,14 @@ public class SecondActivity extends AppCompatActivity {
             mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.pelotudofresco);
             currentSong=R.raw.pelotudofresco;
         }
+            else if (number==31){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.fiestas);
+            currentSong=R.raw.fiestas;
+        }
+            else if (number==32){
+            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.estarahi);
+            currentSong=R.raw.estarahi;
+        }
 
         // Defaults are always a good idea:
         else {
@@ -306,6 +314,12 @@ public class SecondActivity extends AppCompatActivity {
                 break;
             case 30:
                 nameId=R.raw.pelotudofresco;
+                break;
+            case 31:
+                nameId=R.raw.fiestas;
+                break;
+            case 32:
+                nameId=R.raw.estarahi;
                 break;
         }
         return nameId;

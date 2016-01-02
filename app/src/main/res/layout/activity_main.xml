@@ -560,6 +560,42 @@
             android:layout_gravity="end" />
     </TableRow>
 
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            android:textSize="15sp"
+            android:text="@string/fiestas"
+            android:id="@+id/button31"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:onClick="sendMessage"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:layout_gravity="start" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            android:textSize="15sp"
+            android:text="@string/estarahi"
+            android:id="@+id/button32"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:onClick="sendMessage"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:layout_gravity="end" />
+    </TableRow>
+
 </TableLayout>
 </ScrollView>
         <com.google.android.gms.ads.AdView
