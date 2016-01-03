@@ -2,11 +2,13 @@
 <resources>
 
     <string name="app_name">Botonera Gente Sexy/Tres Empanadas</string>
-    <string name="hello_world">Eh wacho!</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_second">SecondActivity</string>
+    <string name="action_settings">Califica la app</string>
+    <string name="infoCompartir">Como compartir</string>
+    <string name="title_activity_second">Para con la ambición y compartí este audio</string>
+    <!--string name="hello_world">Eh wacho!</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
+    <string name="title_activity_display_message">My Message</string>-->
     <string name="nestor1">¿Y Nestor está ?</string>
     <string name="nestor2">Nestor acaba de morir</string>
     <string name="como">¡¿Cómo?!</string>
@@ -14,7 +16,8 @@
     <string name="perosenor">¡Pero señor!</string>
     <string name="comoprogresaste">Como progresaste en la vida vos</string>
     <string name="rica">Rica rica, AMARGA</string>
-    <string name="shareWhatsapp">Envialo por WhatsApp</string>
+    <string name="shareWhatsapp">Compartilo por WhatsApp</string>
+    <string name="shareOther">O elegí otra aplicación disponible</string>
     <string name="hablesenor">Hable señor!</string>
     <string name="udesunpelotudo">Pero usted es un pelotudo!</string>
     <string name="cipayo">Sos un pelotudo y un cipayo</string>
@@ -31,7 +34,7 @@
     <string name="comosenor">¿Como señor?</string>
     <string name="memelaspelotas">Me me me las pelotas</string>
     <string name="familiapelotudos">Pero es una familia de pelotudos</string>
-    <string name="genteadentro">Por que tienen tanta gente ahí adentro</string>
+    <string name="genteadentro">Por que mierda tienen tanta gente ahí adentro</string>
     <string name="noteaguanto">No te aguanto</string>
     <string name="boludopelotudo">Callate, boludo pelotudo</string>
     <string name="sevennegras">Se pueden ver que son negras</string>
@@ -41,6 +44,5 @@
     <string name="fiestas">Las fiestas..</string>
     <string name="estarahi">Quiero estar ahí</string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="title_activity_display_message">My Message</string>
 
 </resources>

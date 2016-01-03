@@ -1,11 +1,14 @@
 package com.prueba.lucas.botonerags;
 
+import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,16 +16,28 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-public class SecondActivity extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity{
     private MediaPlayer mPlayer;
     private int currentSong = 0;
-    Button whatsappShare;
+    private Toolbar mToolbar;
+    Button whatsappShare,otherShare;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+        if (getSupportActionBar() != null)
+        {
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
+
         whatsappShare=(Button) findViewById(R.id.whatsappBtn);
+        otherShare=(Button) findViewById(R.id.otherShareBtn);
+
         Intent intent = getIntent();
         int number = intent.getIntExtra("BUTTON NUMBER", 1);
         this.createListener(number);
@@ -158,14 +173,49 @@ public class SecondActivity extends AppCompatActivity {
             currentSong = R.raw.como;
         }
 
-        mPlayer.start();
+         final AudioManager am=(AudioManager) this.getSystemService(Context.AUDIO_SERVICE);
+         setVolumeControlStream(AudioManager.STREAM_MUSIC);
+
+         final AudioManager.OnAudioFocusChangeListener afChangeListener =
+                new AudioManager.OnAudioFocusChangeListener() {
+                    public void onAudioFocusChange(int focusChange) {
+                        if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT) {
+                            // Pause playback
+                            mPlayer.pause();
+                        } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+                            // Resume playback
+                            mPlayer.start();
+                        } else if (focusChange== AudioManager.AUDIOFOCUS_GAIN_TRANSIENT){
+                            mPlayer.start();
+                        } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
+                            //am.unregisterMediaButtonEventReceiver(RemoteControlReceiver);
+                            //mPlayer.stop();
+                            mPlayer.pause();
+                            mPlayer.release();
+                            mPlayer=null;
+                            // Stop playback
+                        }
+                    }
+
+        };
+        int result = am.requestAudioFocus(afChangeListener,
+                // Use the music stream.
+                AudioManager.STREAM_MUSIC,
+                // Request transient focus.
+                AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+        if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+            //am.registerMediaButtonEventReceiver()
+            // Start playback.
+            mPlayer.start();
+        }
+        //mPlayer.start();
     }
     @Override
     protected void onPause(){
         super.onPause();
-        if (mPlayer.isPlaying()) {
-            mPlayer.pause();
-        }
+        /*if (mPlayer.isPlaying()) {
+            //mPlayer.pause();
+        }*/
     }
     @Override
     protected void onResume() {
@@ -174,16 +224,28 @@ public class SecondActivity extends AppCompatActivity {
             mPlayer = MediaPlayer.create(SecondActivity.this, currentSong);
         }
 
-        mPlayer.start();
+        //mPlayer.start();
     }
     @Override
     protected void onStop() {
         super.onStop();
 
-        if (mPlayer.isPlaying()) {
+        if (!mPlayer.isPlaying()) {
             mPlayer.stop();
         }
     }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        if (!mPlayer.isPlaying()) {
+            mPlayer.stop();
+            //mPlayer.release();
+        }
+    }
+
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -208,17 +270,24 @@ public class SecondActivity extends AppCompatActivity {
     private void createListener(final int fileNumber){
         whatsappShare.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startShare(fileNumber);
+                startShare(fileNumber,"wapp");
+            }
+        });
+        otherShare.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startShare(fileNumber,"other");
             }
         });
     }
-    private void startShare(int songID){
+    private void startShare(int songID, String shareType){
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
         int audioID= getSong(songID);
         sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("android.resource://" +this.getPackageName() + "/" + audioID));
         sendIntent.setType("audio/*");
-        sendIntent.setPackage("com.whatsapp");
+        if (shareType.equals("wapp")) {
+            sendIntent.setPackage("com.whatsapp");
+        }
         startActivity(sendIntent);
     }
     private int getSong(int id){
