@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.StrictMode;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -21,12 +22,24 @@ public class SecondActivity extends AppCompatActivity{
     private int currentSong = 0;
     private Toolbar mToolbar;
     Button whatsappShare,otherShare;
+    private static final boolean DEVELOPER_MODE = true;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+
+        if (DEVELOPER_MODE) {
+            StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
+                    .detectDiskReads()
+                    .detectDiskWrites()
+                    .detectNetwork()
+                    .penaltyLog()
+                    .penaltyFlashScreen()
+                    .build());
+        }
+
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
@@ -172,6 +185,11 @@ public class SecondActivity extends AppCompatActivity{
             mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.como);
             currentSong = R.raw.como;
         }
+        mPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            public void onPrepared(MediaPlayer player) {
+                player.start();
+            }
+        });
 
          final AudioManager am=(AudioManager) this.getSystemService(Context.AUDIO_SERVICE);
          setVolumeControlStream(AudioManager.STREAM_MUSIC);
@@ -181,18 +199,22 @@ public class SecondActivity extends AppCompatActivity{
                     public void onAudioFocusChange(int focusChange) {
                         if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT) {
                             // Pause playback
-                            mPlayer.pause();
+                            if(mPlayer.isPlaying()) {
+                                mPlayer.pause();
+                            }
                         } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
                             // Resume playback
-                            mPlayer.start();
+                            //mPlayer.start();
                         } else if (focusChange== AudioManager.AUDIOFOCUS_GAIN_TRANSIENT){
-                            mPlayer.start();
+                            //mPlayer.start();
                         } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
                             //am.unregisterMediaButtonEventReceiver(RemoteControlReceiver);
                             //mPlayer.stop();
-                            mPlayer.pause();
-                            mPlayer.release();
-                            mPlayer=null;
+                            if(mPlayer.isPlaying()){
+                                mPlayer.pause();
+                                mPlayer.release();
+                                mPlayer=null;
+                            }
                             // Stop playback
                         }
                     }
@@ -206,7 +228,6 @@ public class SecondActivity extends AppCompatActivity{
         if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
             //am.registerMediaButtonEventReceiver()
             // Start playback.
-            mPlayer.start();
         }
         //mPlayer.start();
     }

@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.StrictMode;
 import android.support.annotation.NonNull;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
@@ -32,11 +33,22 @@ public class MainActivity extends ActionBarActivity {
 
     public final static String EXTRA_MESSAGE = "com.prueba.lucas.botonerags.MESSAGE";
     private Toolbar mToolbar;
+    private static final boolean DEVELOPER_MODE = true;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (DEVELOPER_MODE) {
+            StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
+                    .detectDiskReads()
+                    .detectDiskWrites()
+                    .detectNetwork()
+                    .penaltyLog()
+                    .penaltyFlashScreen()
+                    .build());
+        }
+
         setContentView(R.layout.activity_main);
         this.setSoundButtons(new ArrayList<Button>());
 
@@ -252,7 +264,7 @@ public class MainActivity extends ActionBarActivity {
         int audioID= getFileID(songID);
         sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("android.resource://" +this.getPackageName() + "/" + audioID));
         sendIntent.setType("audio/*");
-        startActivity(sendIntent);
+        startActivity(Intent.createChooser(sendIntent,getResources().getText(R.string.title_activity_second)));
     }
 
     public void sendMessage(View view){
