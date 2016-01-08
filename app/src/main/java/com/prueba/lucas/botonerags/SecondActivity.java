@@ -5,8 +5,8 @@ import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.StrictMode;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -14,19 +14,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+
+import java.io.IOException;
 
 
 public class SecondActivity extends AppCompatActivity{
-    private MediaPlayer mPlayer;
-    private int currentSong = 0;
-    private Toolbar mToolbar;
-    Button whatsappShare,otherShare;
-    private static final boolean DEVELOPER_MODE = true;
+    //private MediaPlayer mPlayer;
+
+    private Button whatsappShare,otherShare;
+    //private int currentSong = 0;
+    private static final boolean DEVELOPER_MODE = false;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Toolbar mToolbar;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
@@ -40,231 +42,24 @@ public class SecondActivity extends AppCompatActivity{
                     .build());
         }
 
-
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
-        if (getSupportActionBar() != null)
-        {
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
 
-        whatsappShare=(Button) findViewById(R.id.whatsappBtn);
-        otherShare=(Button) findViewById(R.id.otherShareBtn);
+        whatsappShare = (Button) findViewById(R.id.whatsappBtn);
+        otherShare = (Button) findViewById(R.id.otherShareBtn);
+
 
         Intent intent = getIntent();
         int number = intent.getIntExtra("BUTTON NUMBER", 1);
-        this.createListener(number);
+        this.createListeners(number);
         /*TextView tv = (TextView) findViewById(R.id.textView);
         tv.setText(String.valueOf(number));*/
 
-        if (number == 1) {
-            mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.nestoresta);
-            currentSong = R.raw.nestoresta;
-        } else if (number == 2) {
-            mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.nestormorir);
-            currentSong = R.raw.nestormorir;
-
-        } else if (number == 3) {
-            mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.como);
-            currentSong = R.raw.como;
-
-        } else if (number == 4) {
-            mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.pordios);
-            currentSong = R.raw.pordios;
-        } else if (number== 5) {
-            mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.perosenor);
-            currentSong = R.raw.perosenor;
-        }  else if (number== 6) {
-            mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.comoprogresaste );
-            currentSong = R.raw.comoprogresaste;
-        } else if (number== 7) {
-            mPlayer= MediaPlayer.create(SecondActivity.this,R.raw.ricaamarga);
-            currentSong=R.raw.ricaamarga;
-        }   else if (number== 8) {
-            mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.hablesenor);
-            currentSong = R.raw.hablesenor;
-        }
-            else if (number== 9) {
-            mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.udespelotudo);
-            currentSong = R.raw.udespelotudo;
-        }   else if (number== 10) {
-            mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.cipayo);
-            currentSong = R.raw.cipayo;
-        }
-            else if (number==11){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.dequehabla);
-            currentSong= R.raw.dequehabla;
-        }
-            else if (number==12){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.otrodia);
-            currentSong=R.raw.otrodia;
-        }
-            else if (number==13){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.cachetes);
-            currentSong=R.raw.cachetes;
-        }
-            else if (number==14){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.gordotravesti);
-            currentSong=R.raw.gordotravesti;
-        }
-            else if (number==15){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.gordomerquero);
-            currentSong=R.raw.gordomerquero;
-        }
-            else if (number==16){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.eueeue);
-            currentSong=R.raw.eueeue;
-        }
-            else if (number==17){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.luppi);
-            currentSong=R.raw.luppi;
-        }
-            else if (number==18){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.milcasos);
-            currentSong=R.raw.milcasos;
-        }
-            else if (number==19){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.enelaire);
-            currentSong=R.raw.enelaire;
-        }
-            else if (number==20){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.negros43);
-            currentSong=R.raw.negros43;
-        }
-            else if (number==21){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.comosenor);
-            currentSong=R.raw.comosenor;
-        }
-            else if (number==22){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.memelaspelotas);
-            currentSong=R.raw.memelaspelotas;
-        }
-            else if (number==23){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.familiapelotudos);
-            currentSong=R.raw.familiapelotudos;
-        }
-            else if (number==24){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.genteadentro);
-            currentSong=R.raw.genteadentro;
-        }
-            else if (number==25){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.noteaguanto);
-            currentSong=R.raw.noteaguanto;
-        }
-            else if (number==26){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.boludopelotudo);
-            currentSong=R.raw.boludopelotudo;
-        }
-            else if (number==27){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.sevennegras);
-            currentSong=R.raw.sevennegras;
-        }
-            else if (number==28){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.negroindigena);
-            currentSong=R.raw.negroindigena;
-        }
-            else if (number==29){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.loco);
-            currentSong=R.raw.loco ;
-        }
-            else if (number==30){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.pelotudofresco);
-            currentSong=R.raw.pelotudofresco;
-        }
-            else if (number==31){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.fiestas);
-            currentSong=R.raw.fiestas;
-        }
-            else if (number==32){
-            mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.estarahi);
-            currentSong=R.raw.estarahi;
-        }
-
-        // Defaults are always a good idea:
-        else {
-            mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.como);
-            currentSong = R.raw.como;
-        }
-        mPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            public void onPrepared(MediaPlayer player) {
-                player.start();
-            }
-        });
-
-         final AudioManager am=(AudioManager) this.getSystemService(Context.AUDIO_SERVICE);
-         setVolumeControlStream(AudioManager.STREAM_MUSIC);
-
-         final AudioManager.OnAudioFocusChangeListener afChangeListener =
-                new AudioManager.OnAudioFocusChangeListener() {
-                    public void onAudioFocusChange(int focusChange) {
-                        if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT) {
-                            // Pause playback
-                            if(mPlayer.isPlaying()) {
-                                mPlayer.pause();
-                            }
-                        } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
-                            // Resume playback
-                            //mPlayer.start();
-                        } else if (focusChange== AudioManager.AUDIOFOCUS_GAIN_TRANSIENT){
-                            //mPlayer.start();
-                        } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
-                            //am.unregisterMediaButtonEventReceiver(RemoteControlReceiver);
-                            //mPlayer.stop();
-                            if(mPlayer.isPlaying()){
-                                mPlayer.pause();
-                                mPlayer.release();
-                                mPlayer=null;
-                            }
-                            // Stop playback
-                        }
-                    }
-
-        };
-        int result = am.requestAudioFocus(afChangeListener,
-                // Use the music stream.
-                AudioManager.STREAM_MUSIC,
-                // Request transient focus.
-                AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
-        if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
-            //am.registerMediaButtonEventReceiver()
-            // Start playback.
-        }
-        //mPlayer.start();
+        new playSound(number).execute();
     }
-    @Override
-    protected void onPause(){
-        super.onPause();
-        /*if (mPlayer.isPlaying()) {
-            //mPlayer.pause();
-        }*/
-    }
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if (mPlayer == null) {
-            mPlayer = MediaPlayer.create(SecondActivity.this, currentSong);
-        }
-
-        //mPlayer.start();
-    }
-    @Override
-    protected void onStop() {
-        super.onStop();
-
-        if (!mPlayer.isPlaying()) {
-            mPlayer.stop();
-        }
-    }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
-        if (!mPlayer.isPlaying()) {
-            mPlayer.stop();
-            //mPlayer.release();
-        }
-    }
-
 
 
     @Override
@@ -288,7 +83,7 @@ public class SecondActivity extends AppCompatActivity{
 
         return super.onOptionsItemSelected(item);
     }
-    private void createListener(final int fileNumber){
+    private void createListeners(final int fileNumber){
         whatsappShare.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startShare(fileNumber,"wapp");
@@ -414,4 +209,201 @@ public class SecondActivity extends AppCompatActivity{
         }
         return nameId;
     }
+    private class playSound extends AsyncTask<Void, Void, Void> {
+        private MediaPlayer mPlayer;
+        private final int number;
+        int currentSong;
+        public playSound(int numeroCancion) {
+            this.number = numeroCancion;
+        }
+        @Override
+        protected Void doInBackground(Void... params) {
+
+            if(mPlayer!=null){
+                mPlayer.release();
+            }
+
+            if (number == 1) {
+                this.mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.nestoresta);
+                currentSong = R.raw.nestoresta;
+            } else if (number == 2) {
+                this.mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.nestormorir);
+                currentSong = R.raw.nestormorir;
+
+            } else if (number == 3) {
+                this.mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.como);
+                currentSong = R.raw.como;
+
+            } else if (number == 4) {
+                this.mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.pordios);
+                currentSong = R.raw.pordios;
+            } else if (number== 5) {
+                this.mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.perosenor);
+                currentSong = R.raw.perosenor;
+            }  else if (number== 6) {
+                this.mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.comoprogresaste );
+                currentSong = R.raw.comoprogresaste;
+            } else if (number== 7) {
+                this.mPlayer= MediaPlayer.create(SecondActivity.this,R.raw.ricaamarga);
+                currentSong=R.raw.ricaamarga;
+            }   else if (number== 8) {
+                this.mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.hablesenor);
+                currentSong = R.raw.hablesenor;
+            }
+            else if (number== 9) {
+                this.mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.udespelotudo);
+                currentSong = R.raw.udespelotudo;
+            }   else if (number== 10) {
+                this.mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.cipayo);
+                currentSong = R.raw.cipayo;
+            }
+            else if (number==11){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.dequehabla);
+                currentSong= R.raw.dequehabla;
+            }
+            else if (number==12){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.otrodia);
+                currentSong=R.raw.otrodia;
+            }
+            else if (number==13){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.cachetes);
+                currentSong=R.raw.cachetes;
+            }
+            else if (number==14){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.gordotravesti);
+                currentSong=R.raw.gordotravesti;
+            }
+            else if (number==15){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.gordomerquero);
+                currentSong=R.raw.gordomerquero;
+            }
+            else if (number==16){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.eueeue);
+                currentSong=R.raw.eueeue;
+            }
+            else if (number==17){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.luppi);
+                currentSong=R.raw.luppi;
+            }
+            else if (number==18){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.milcasos);
+                currentSong=R.raw.milcasos;
+            }
+            else if (number==19){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.enelaire);
+                currentSong=R.raw.enelaire;
+            }
+            else if (number==20){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.negros43);
+                currentSong=R.raw.negros43;
+            }
+            else if (number==21){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.comosenor);
+                currentSong=R.raw.comosenor;
+            }
+            else if (number==22){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.memelaspelotas);
+                currentSong=R.raw.memelaspelotas;
+            }
+            else if (number==23){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.familiapelotudos);
+                currentSong=R.raw.familiapelotudos;
+            }
+            else if (number==24){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.genteadentro);
+                currentSong=R.raw.genteadentro;
+            }
+            else if (number==25){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.noteaguanto);
+                currentSong=R.raw.noteaguanto;
+            }
+            else if (number==26){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.boludopelotudo);
+                currentSong=R.raw.boludopelotudo;
+            }
+            else if (number==27){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.sevennegras);
+                currentSong=R.raw.sevennegras;
+            }
+            else if (number==28){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.negroindigena);
+                currentSong=R.raw.negroindigena;
+            }
+            else if (number==29){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.loco);
+                currentSong=R.raw.loco ;
+            }
+            else if (number==30){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.pelotudofresco);
+                currentSong=R.raw.pelotudofresco;
+            }
+            else if (number==31){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.fiestas);
+                currentSong=R.raw.fiestas;
+            }
+            else if (number==32){
+                this.mPlayer=MediaPlayer.create(SecondActivity.this,R.raw.estarahi);
+                currentSong=R.raw.estarahi;
+            }
+
+            // Defaults are always a good idea:
+            else {
+                this.mPlayer = MediaPlayer.create(SecondActivity.this, R.raw.como);
+                currentSong = R.raw.como;
+            }
+            mPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                public void onPrepared(MediaPlayer player) {
+                    player.start();
+                }
+            });
+
+            final AudioManager am=(AudioManager) getSystemService(Context.AUDIO_SERVICE);
+            setVolumeControlStream(AudioManager.STREAM_MUSIC);
+
+            final AudioManager.OnAudioFocusChangeListener afChangeListener =
+                    new AudioManager.OnAudioFocusChangeListener() {
+                        public void onAudioFocusChange(int focusChange) {
+                            if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT) {
+                                // Pause playback
+                                if (mPlayer!=null) {
+                                    if (mPlayer.isPlaying()) {
+                                        mPlayer.pause();
+                                    }
+                                }
+                            } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+                                // Resume playback
+                                //mPlayer.start();
+                            } else if (focusChange== AudioManager.AUDIOFOCUS_GAIN_TRANSIENT){
+                                //mPlayer.start();
+                            } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
+                                //am.unregisterMediaButtonEventReceiver(RemoteControlReceiver);
+                                //mPlayer.stop();
+                                if(mPlayer!=null) {
+                                    if (mPlayer.isPlaying()) {
+                                        mPlayer.pause();
+                                        //mPlayer.release();
+                                        //mPlayer = null;
+                                    }
+                                }
+                                // Stop playback
+                            }
+                        }
+
+                    };
+            int result = am.requestAudioFocus(afChangeListener,
+                    // Use the music stream.
+                    AudioManager.STREAM_MUSIC,
+                    // Request transient focus.
+                    AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+            if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+                //am.registerMediaButtonEventReceiver()
+                // Start playback.
+                if(mPlayer != null) {
+                    mPlayer.start();
+                }
+            }
+            return null;
+        }
+    }
+
 }

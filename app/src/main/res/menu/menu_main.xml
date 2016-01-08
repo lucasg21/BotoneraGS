@@ -11,7 +11,7 @@
         android:id="@+id/media_actions"
         android:title="@string/infoCompartir"
         android:orderInCategory="200"
-        android:icon="@drawable/ic_action_info_outline"
+        android:icon="@drawable/ic_social_share"
         app:showAsAction="ifRoom"
         />
 </menu>

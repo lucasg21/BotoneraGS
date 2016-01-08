@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="labels">
+        <item>NestorEsta</item>
+        <item>NestorMorir</item>
+        <item>Como</item>
+        <item>PorDios</item>
+        <item>PeroSenor</item>
+        <item>ComoProgresaste</item>
+        <item>RicaAmarga</item>
+        <item>HableSenor</item>
+        <item>UdEsUnPelotudo</item>
+        <item>Cipayo</item>
+        <item>DeQueHabla</item>
+        <item>OtroDia</item>
+        <item>Cachetes</item>
+        <item>GordoTravesti</item>
+        <item>GordoMerquero</item>
+        <item>EueEue</item>
+        <item>Luppi</item>
+        <item>MilCasos</item>
+        <item>EnElAire</item>
+        <item>Negros43</item>
+        <item>ComoSenor</item>
+        <item>MemeLasPelotas</item>
+        <item>FamiliaPelotudos</item>
+        <item>GenteAdentro</item>
+        <item>NoTeAguanto</item>
+        <item>BoludoPelotudo</item>
+        <item>SeVenNegras</item>
+        <item>NegroIndigena</item>
+        <item>Loco</item>
+        <item>PelotudoFresco</item>
+        <item>Fiestas</item>
+        <item>EstarAhi</item>
+    </string-array>
+
+
+    <integer-array name="ids">
+    <item>@raw/nestoresta</item>
+    <item>@raw/nestormorir</item>
+    <item>@raw/como</item>
+    <item>@raw/pordios</item>
+    <item>@raw/perosenor</item>
+    <item>@raw/comoprogresaste</item>
+    <item>@raw/ricaamarga</item>
+    <item>@raw/hablesenor</item>
+    <item>@raw/udespelotudo</item>
+    <item>@raw/cipayo</item>
+    <item>@raw/dequehabla</item>
+    <item>@raw/otrodia</item>
+    <item>@raw/cachetes</item>
+    <item>@raw/gordotravesti</item>
+    <item>@raw/gordomerquero</item>
+    <item>@raw/eueeue</item>
+    <item>@raw/luppi</item>
+    <item>@raw/milcasos</item>
+    <item>@raw/enelaire</item>
+    <item>@raw/negros43</item>
+    <item>@raw/comosenor</item>
+    <item>@raw/memelaspelotas</item>
+    <item>@raw/familiapelotudos</item>
+    <item>@raw/genteadentro</item>
+    <item>@raw/noteaguanto</item>
+    <item>@raw/boludopelotudo</item>
+    <item>@raw/sevennegras</item>
+    <item>@raw/negroindigena</item>
+    <item>@raw/loco</item>
+    <item>@raw/pelotudofresco</item>
+    <item>@raw/fiestas</item>
+    <item>@raw/estarahi</item>
+
+    </integer-array>
+</resources>

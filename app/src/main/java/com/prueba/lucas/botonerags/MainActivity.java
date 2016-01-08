@@ -5,7 +5,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.StrictMode;
-import android.support.annotation.NonNull;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
@@ -13,31 +12,32 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-
 
 public class MainActivity extends ActionBarActivity {
-    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,b18,b19,b20,b21,b22,b23,b24,b25,b26,b27,b28,b29,b30,b31,b32;
-    ArrayList<Button> soundButtons;
+    private ArrayList<Button> soundButtons;
+    private SoundPlayer mSoundPlayer;
 
-    public void setSoundButtons(ArrayList<Button> soundCollection) {
+
+    private void setSoundButtons(ArrayList<Button> soundCollection) {
         this.soundButtons =soundCollection;
     }
 
     public final static String EXTRA_MESSAGE = "com.prueba.lucas.botonerags.MESSAGE";
-    private Toolbar mToolbar;
-    private static final boolean DEVELOPER_MODE = true;
+    private final static boolean DEVELOPER_MODE = true;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,b18,b19,b20,b21,b22,b23,b24,b25,b26,b27,b28,b29,b30,b31,b32;
+        Toolbar mToolbar;
+
         super.onCreate(savedInstanceState);
         if (DEVELOPER_MODE) {
             StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
@@ -50,8 +50,11 @@ public class MainActivity extends ActionBarActivity {
         }
 
         setContentView(R.layout.activity_main);
-        this.setSoundButtons(new ArrayList<Button>());
 
+        mSoundPlayer = new SoundPlayer(this);
+        final Sound[] soundArray = SoundStore.getSounds(this);
+
+        this.setSoundButtons(new ArrayList<Button>());
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         if (getSupportActionBar() != null)
@@ -182,19 +185,62 @@ public class MainActivity extends ActionBarActivity {
         b31=(Button) findViewById(R.id.button31);
         b31.setLongClickable(true);
         soundButtons.add(30,b31);
+        /*b31.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                Sound sound=(Sound) soundArray[30];
+                mSoundPlayer.playSound(sound);
+            }
+        });*/
 
         b32=(Button) findViewById(R.id.button32);
         b32.setLongClickable(true);
         soundButtons.add(31,b32);
 
-        this.createListeners();
+        this.createListeners(soundArray);
         this.setLongClickListeners();
 
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
     }
+    @Override
+    public void onPause() {
+        super.onPause();
+        //mSoundPlayer.release();
+    }
 
+    private void createListeners(final Sound[] aSoundArray) {
+        for(final Button element:soundButtons){
+            element.setOnClickListener(new OnClickListener(){
+                public void onClick(View v){
+                    Sound sound=(Sound) aSoundArray[soundButtons.indexOf(element)];
+                    mSoundPlayer.playSound(sound);
+                    //startSecondActivity(soundButtons.indexOf(element)+ 1);
+                }
+            });
+        }
+    }
+
+    private void setLongClickListeners(){
+        for(final Button element:soundButtons){
+            element.setOnLongClickListener(new View.OnLongClickListener(){
+                @Override
+                public boolean onLongClick(View v){
+                    shareAudio(soundButtons.indexOf(element)+ 1);
+                    return true;
+                }
+            });
+        }
+    }
+
+    private void shareAudio(int songID){
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        int audioID= getFileID(songID);
+        sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("android.resource://" +this.getPackageName() + "/" + audioID));
+        sendIntent.setType("audio/*");
+        startActivity(Intent.createChooser(sendIntent,getResources().getText(R.string.title_activity_second)));
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -231,51 +277,24 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void createListeners() {
-        for(final Button element:soundButtons){
-            element.setOnClickListener(new OnClickListener(){
-                public void onClick(View v){
-                    startSecondActivity(soundButtons.indexOf(element)+ 1);
-                }
-            });
-        }
-    }
 
-    private void setLongClickListeners(){
-        for(final Button element:soundButtons){
-            element.setOnLongClickListener(new View.OnLongClickListener(){
-                @Override
-                public boolean onLongClick(View v){
-                    shareAudio(soundButtons.indexOf(element)+ 1);
-                    return true;
-                }
-            });
-        }
-    }
     private void startSecondActivity(int buttonNum) {
         Intent intent = new Intent(this, SecondActivity.class);
         intent.putExtra("BUTTON NUMBER", buttonNum);
         startActivity(intent);
     }
 
-    private void shareAudio(int songID){
-        Intent sendIntent = new Intent();
-        sendIntent.setAction(Intent.ACTION_SEND);
-        int audioID= getFileID(songID);
-        sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("android.resource://" +this.getPackageName() + "/" + audioID));
-        sendIntent.setType("audio/*");
-        startActivity(Intent.createChooser(sendIntent,getResources().getText(R.string.title_activity_second)));
-    }
 
-    public void sendMessage(View view){
+
+    /*public void sendMessage(View view){
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         //EditText editText = (EditText) findViewById(R.id.edit_message);
         //String message = editText.getText().toString();
         //intent.putExtra(EXTRA_MESSAGE, "Ehh wacho.");
         startActivity(intent);
-    }
+    }*/
 
-    public int getFileID(int id){
+    private int getFileID(int id){
         int nameId;
         nameId=0;
         switch(id) {
