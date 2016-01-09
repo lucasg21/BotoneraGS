@@ -1,29 +1,50 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:layout_above="@+id/adView">
+    xmlns:app="http://schemas.android.com/tools">
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/collapsingToolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adView">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    app:layout_collapseMode="pin"/>
+                <!--<include
+                 android:id="@+id/toolbar"
+                 layout="@layout/toolbar" />-->
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
 
+        <android.support.v4.widget.NestedScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/adView"
+            >
 <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:stretchColumns="0,1">
 
-        <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar" />
 
         <TableRow
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
-
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -597,16 +618,16 @@
     </TableRow>
 
 </TableLayout>
-</ScrollView>
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            ads:adSize="BANNER"
-            ads:adUnitId="@string/banner_ad_unit_id">
-        </com.google.android.gms.ads.AdView>
+</android.support.v4.widget.NestedScrollView>
 
-
+</android.support.design.widget.CoordinatorLayout>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
 </RelativeLayout>

@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Botonera Gente Sexy/Tres Empanadas</string>
+    <string name="app_name">Botonera Gente Sexy</string>
     <string name="action_settings">Califica la app</string>
     <string name="infoCompartir">Como compartir</string>
     <string name="title_activity_second">Para con la ambición y compartí este audio</string>
-    <!--string name="hello_world">Eh wacho!</string>
-    <string name="edit_message">Enter a message</string>
-    <string name="button_send">Send</string>
-    <string name="title_activity_display_message">My Message</string>-->
     <string name="nestor1">¿Y Nestor está ?</string>
     <string name="nestor2">Nestor acaba de morir</string>
     <string name="como">¡¿Cómo?!</string>
-    <string name="marecoPorDios">Uf,por Diós</string>
+    <string name="marecoPorDios">Uf, por Diós</string>
     <string name="perosenor">¡Pero señor!</string>
     <string name="comoprogresaste">Como progresaste en la vida vos</string>
     <string name="rica">Rica rica, AMARGA</string>
-    <string name="shareWhatsapp">Compartilo por WhatsApp</string>
-    <string name="shareOther">O elegí otra aplicación disponible</string>
     <string name="hablesenor">Hable señor!</string>
     <string name="udesunpelotudo">Pero usted es un pelotudo!</string>
     <string name="cipayo">Sos un pelotudo y un cipayo</string>
@@ -42,6 +36,8 @@
     <string name="mevuelvoloco">Me vuelvo loco</string>
     <string name="pelotudo">Pelotudo</string>
     <string name="fiestas">Las fiestas..</string>
+    <string name="califica_title">Califica la aplicación</string>
+    <string name="califica_body">Si te gusto la botonera, te pido que aflojes con el inchi winchi por un segundo y me ayudes calificandola. También podes sugerir algún nuevo sonido o un cambio que quieras para una actualización!</string>
     <string name="estarahi">Quiero estar ahí</string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 

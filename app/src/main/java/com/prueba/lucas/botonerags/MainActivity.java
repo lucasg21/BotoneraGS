@@ -1,26 +1,41 @@
+/*
+ * Copyright (C) 2016 Lucas Gilone
+ *
+ *Licensed under the Apache License, Version 2.0 (the "License");
+ *you may not use this file except in compliance with the License.
+ *You may obtain a copy of the License at
+ *
+ *http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *Unless required by applicable law or agreed to in writing, software
+ *distributed under the License is distributed on an "AS IS" BASIS,
+ *WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *See the License for the specific language governing permissions and
+ *limitations under the License.
+ */
+
 package com.prueba.lucas.botonerags;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.StrictMode;
-import android.support.v7.app.ActionBarActivity;
+//import android.os.StrictMode;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.kobakei.ratethisapp.RateThisApp;
 
 import java.util.ArrayList;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
     private ArrayList<Button> soundButtons;
     private SoundPlayer mSoundPlayer;
 
@@ -29,8 +44,7 @@ public class MainActivity extends ActionBarActivity {
         this.soundButtons =soundCollection;
     }
 
-    public final static String EXTRA_MESSAGE = "com.prueba.lucas.botonerags.MESSAGE";
-    private final static boolean DEVELOPER_MODE = true;
+    //private final static boolean DEVELOPER_MODE = false;
 
 
     @Override
@@ -39,7 +53,24 @@ public class MainActivity extends ActionBarActivity {
         Toolbar mToolbar;
 
         super.onCreate(savedInstanceState);
-        if (DEVELOPER_MODE) {
+        setContentView(R.layout.activity_main);
+
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+        if (getSupportActionBar() != null)
+        {
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
+
+        // Custom criteria: 3 days and 10 launches
+        RateThisApp.Config config = new RateThisApp.Config(3,10);
+        // Custom title and message
+        config.setTitle(R.string.califica_title);
+        config.setMessage(R.string.califica_body);
+        RateThisApp.init(config);
+
+
+        /*if (DEVELOPER_MODE) {
             StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
                     .detectDiskReads()
                     .detectDiskWrites()
@@ -47,20 +78,12 @@ public class MainActivity extends ActionBarActivity {
                     .penaltyLog()
                     .penaltyFlashScreen()
                     .build());
-        }
-
-        setContentView(R.layout.activity_main);
+        }*/
 
         mSoundPlayer = new SoundPlayer(this);
         final Sound[] soundArray = SoundStore.getSounds(this);
 
         this.setSoundButtons(new ArrayList<Button>());
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(mToolbar);
-        if (getSupportActionBar() != null)
-        {
-            getSupportActionBar().setDisplayShowHomeEnabled(true);
-        }
 
         b1 =(Button) findViewById(R.id.button1);
         b1.setLongClickable(true);
@@ -208,12 +231,19 @@ public class MainActivity extends ActionBarActivity {
         super.onPause();
         //mSoundPlayer.release();
     }
+    @Override
+    public void onStart() {
+        super.onStart();
+        RateThisApp.onStart(this);
+        RateThisApp.showRateDialogIfNeeded(this);
+
+    }
 
     private void createListeners(final Sound[] aSoundArray) {
         for(final Button element:soundButtons){
             element.setOnClickListener(new OnClickListener(){
                 public void onClick(View v){
-                    Sound sound=(Sound) aSoundArray[soundButtons.indexOf(element)];
+                    Sound sound=aSoundArray[soundButtons.indexOf(element)];
                     mSoundPlayer.playSound(sound);
                     //startSecondActivity(soundButtons.indexOf(element)+ 1);
                 }
@@ -262,9 +292,9 @@ public class MainActivity extends ActionBarActivity {
         }
         else{
             new AlertDialog.Builder(MainActivity.this)
-                    .setTitle("Compartir sin escuchar")
-                    .setMessage("Si queres compartir el audio directamente sin tener que escucharlo, " +
-                            "mantene el boton apretado por unos segundos y elegí tu app de mensajería preferida!")
+                    .setTitle("¿Como comparto un sonido ?")
+                    .setMessage("Si queres compartir el audio, " +
+                            "mantené el boton apretado por unos segundos y elegí tu app de mensajería preferida!")
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.cancel();
@@ -278,11 +308,11 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
-    private void startSecondActivity(int buttonNum) {
+    /*private void startSecondActivity(int buttonNum) {
         Intent intent = new Intent(this, SecondActivity.class);
         intent.putExtra("BUTTON NUMBER", buttonNum);
         startActivity(intent);
-    }
+    }*/
 
 
 

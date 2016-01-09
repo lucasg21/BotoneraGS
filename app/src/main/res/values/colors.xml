@@ -2,10 +2,5 @@
 <resources>
     <color name="colorPrimary">#F50057</color>
     <color name="colorPrimaryDark">#C51162</color>
-    <color name="textColorPrimary">#FFFFFF</color>
-    <color name="windowBackground">#FFFFFF</color>
-    <color name="navigationBarColor">#000000</color>
-    <color name="colorAccent">#FF80AB</color>
-    <color name="buttonTextColor">#FFEB3B</color>
-    <color name="transparent">#FFFFFF</color>
+    <color name="buttonLabel">#000000</color>
 </resources>
