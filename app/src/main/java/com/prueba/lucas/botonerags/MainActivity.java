@@ -21,7 +21,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 //import android.os.StrictMode;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
@@ -68,9 +67,6 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
 
-        /*CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsingToolbarLayout);
-        collapsingToolbarLayout.setTitle("My Title");*/
-
         // Custom criteria: 3 days and 10 launches
         RateThisApp.Config config = new RateThisApp.Config(3,10);
         // Custom title and message
@@ -115,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         soundButtons.add(4,b5);
 
         b6= (Button) findViewById(R.id.button6);
-        b1.setLongClickable(true);
+        b6.setLongClickable(true);
         soundButtons.add(5,b6);
 
         b7= (Button) findViewById(R.id.button7);
@@ -232,6 +228,15 @@ public class MainActivity extends AppCompatActivity {
         this.setLongClickListeners();
 
     }
+
+    private void sendFeedback() {
+        final Intent _Intent = new Intent(android.content.Intent.ACTION_SEND);
+        _Intent.setType("text/mail");
+        _Intent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{ getString(R.string.mail_feedback_email) });
+        _Intent.putExtra(android.content.Intent.EXTRA_SUBJECT, getString(R.string.mail_feedback_subject));
+        startActivity(Intent.createChooser(_Intent, getString(R.string.title_send_feedback)));
+    }
+
     @Override
     public void onPause() {
         super.onPause();
@@ -294,6 +299,7 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            sendFeedback();
             return true;
         }
         else{

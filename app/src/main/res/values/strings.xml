@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Botonera Gente Sexy</string>
-    <string name="action_settings">Califica la app</string>
+    <string name="action_settings">Enviar sugerencia</string>
     <string name="infoCompartir">Como compartir</string>
     <string name="title_activity_second">Para con la ambición y compartí este audio</string>
     <string name="nestor1">¿Y Nestor está ?</string>
@@ -40,5 +40,8 @@
     <string name="califica_body">Si te gusto la botonera, te pido que aflojes con el inchi winchi por un segundo y me ayudes calificandola. También podes sugerir algún nuevo sonido o un cambio que quieras para una actualización!</string>
     <string name="estarahi">Quiero estar ahí</string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="mail_feedback_email">lucas.saka21@gmail.com</string>
+    <string name="mail_feedback_subject">Feedback Botonera GS</string>
+    <string name="title_send_feedback">Envía tu sugerencia</string>
 
 </resources>
