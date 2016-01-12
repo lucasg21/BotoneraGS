@@ -32,10 +32,14 @@ import android.widget.Button;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.kobakei.ratethisapp.RateThisApp;
-
 import java.util.ArrayList;
 
+
+
 public class MainActivity extends AppCompatActivity {
+
+    public final static String TAG = MainActivity.class.getSimpleName();
+
     private ArrayList<Button> soundButtons;
     private SoundPlayer mSoundPlayer;
 
@@ -57,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
+
         mAdView.loadAd(adRequest);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -74,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
         config.setMessage(R.string.califica_body);
         RateThisApp.init(config);
 
-
         /*if (DEVELOPER_MODE) {
             StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
                     .detectDiskReads()
@@ -90,7 +94,8 @@ public class MainActivity extends AppCompatActivity {
 
         this.setSoundButtons(new ArrayList<Button>());
 
-        b1 =(Button) findViewById(R.id.button1);
+        //b1 =(Button) findViewById(R.id.button1);
+        b1=(Button) findViewById(R.id.button1);
         b1.setLongClickable(true);
         soundButtons.add(0,b1);
 
