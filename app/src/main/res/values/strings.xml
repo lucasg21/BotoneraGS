@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Botonera Gente Sexy</string>
+    <string name="app_name">Botonera Gente Sexy/Tres Empanadas</string>
     <string name="action_settings">Enviar sugerencia</string>
     <string name="infoCompartir">Como compartir</string>
     <string name="title_activity_second">Para con la ambición y compartí este audio</string>
@@ -42,7 +42,7 @@
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="mail_feedback_email">lucas.saka21@gmail.com</string>
     <string name="mail_feedback_subject">Feedback Botonera GS</string>
-    <string name="title_send_feedback">Envía tu sugerencia</string>
+    <string name="title_send_feedback">Enviá tu sugerencia</string>
     <string name="crash_dialog_text">Hubo un problema durante la ejecución de la aplicación. Por favor, te pido que envíes el mail con la informacion del error. Son solo unos segundos y puede ayudar a encontrar el problema. Muchas gracias!</string>
     <string name="crash_dialog_title">Botonera Gente Sexy tuvo un problema</string>
     <string name="crash_dialog_ok_toast">Estoy feeeliz, eue eue! Gracias por enviar el reporte!</string>

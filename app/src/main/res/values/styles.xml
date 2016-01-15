@@ -20,7 +20,7 @@
     </style>
 
     <style name="Toolbar.TitleText" parent="@style/Base.TextAppearance.AppCompat.Title">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">14sp</item>
     </style>
 
     <style name="ToolbarStyle">
@@ -31,7 +31,7 @@
         parent="style/TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textColor">@color/buttonLabel</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">14sp</item>
     </style>
 
     <style name="Theme.Dialog" parent="@android:style/Theme.Dialog" />
