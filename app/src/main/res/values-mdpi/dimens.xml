@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="button_caption_size">10sp</dimen>
+    <dimen name="title_size">11sp</dimen>
+</resources>
