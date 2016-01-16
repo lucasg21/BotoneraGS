@@ -4,6 +4,9 @@
     android:installLocation="auto">
     <uses-permission android:name="android.permission.INTERNET">
     </uses-permission>
+    <supports-screens
+        android:largeScreens="true"
+        android:xlargeScreens="true"/>
     <application
         android:allowBackup="true"
         android:fullBackupContent="true"
