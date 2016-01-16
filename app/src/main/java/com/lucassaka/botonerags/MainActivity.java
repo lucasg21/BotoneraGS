@@ -319,7 +319,7 @@ public class MainActivity extends AppCompatActivity {
                             dialog.cancel();
                         }
                     })
-                    .setIcon(android.R.drawable.ic_dialog_info)
+                    .setIcon(R.drawable.ic_info_black_24dp)
                     .show();
         }
 
