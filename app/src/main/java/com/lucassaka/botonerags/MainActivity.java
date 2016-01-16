@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (getSupportActionBar() != null)
         {
+            getSupportActionBar().setTitle(R.string.appbar_title);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
 

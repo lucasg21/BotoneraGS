@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">Botonera Gente Sexy/Tres Empanadas</string>
+    <string name="appbar_title">Botonera Gente Sexy</string>
     <string name="action_settings">Enviar sugerencia</string>
     <string name="infoCompartir">Como compartir</string>
     <string name="title_activity_second">Para con la ambición y compartí este audio</string>

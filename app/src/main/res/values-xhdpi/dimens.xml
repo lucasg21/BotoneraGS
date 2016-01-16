@@ -1,4 +1,4 @@
 <resources>
     <dimen name="button_caption_size">14sp</dimen>
-    <dimen name="title_size">12sp</dimen>
+    <dimen name="title_size">20sp</dimen>
 </resources>
