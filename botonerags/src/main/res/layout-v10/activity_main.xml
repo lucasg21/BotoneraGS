@@ -422,7 +422,7 @@
             android:drawableTop="@drawable/tresempanadasicon"
             android:background="@android:color/transparent"
             android:textSize="@dimen/button_caption_size"
-            android:text="@string/genteadentro"
+            android:text="@string/sosmersa"
             android:id="@+id/button24"
             android:layout_marginLeft="19dp"
             android:layout_marginStart="19dp"

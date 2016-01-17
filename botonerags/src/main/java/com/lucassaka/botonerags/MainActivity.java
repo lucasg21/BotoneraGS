@@ -418,7 +418,7 @@ public class MainActivity extends AppCompatActivity {
                 nameId=R.raw.familiapelotudos;
                 break;
             case 24:
-                nameId=R.raw.genteadentro;
+                nameId=R.raw.sosmersa;
                 break;
             case 25:
                 nameId=R.raw.noteaguanto;

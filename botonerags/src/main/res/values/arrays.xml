@@ -24,7 +24,7 @@
         <item>ComoSenor</item>
         <item>MemeLasPelotas</item>
         <item>FamiliaPelotudos</item>
-        <item>GenteAdentro</item>
+        <item>SosMersa</item>
         <item>NoTeAguanto</item>
         <item>BoludoPelotudo</item>
         <item>SeVenNegras</item>
@@ -60,7 +60,7 @@
     <item>@raw/comosenor</item>
     <item>@raw/memelaspelotas</item>
     <item>@raw/familiapelotudos</item>
-    <item>@raw/genteadentro</item>
+    <item>@raw/sosmersa</item>
     <item>@raw/noteaguanto</item>
     <item>@raw/boludopelotudo</item>
     <item>@raw/sevennegras</item>

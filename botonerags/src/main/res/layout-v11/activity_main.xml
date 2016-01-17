@@ -445,7 +445,7 @@
             android:background="@android:color/transparent"
             style="?android:attr/buttonBarButtonStyle"
             android:textSize="@dimen/button_caption_size"
-            android:text="@string/genteadentro"
+            android:text="@string/sosmersa"
             android:id="@+id/button24"
             android:layout_marginLeft="19dp"
             android:layout_marginStart="19dp"
