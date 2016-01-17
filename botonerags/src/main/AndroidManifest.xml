@@ -4,6 +4,7 @@
     android:installLocation="auto">
     <uses-permission android:name="android.permission.INTERNET">
     </uses-permission>
+    <uses-sdk android:minSdkVersion="10"/>
     <supports-screens
         android:largeScreens="true"
         android:xlargeScreens="true"/>
