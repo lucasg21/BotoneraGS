@@ -21,6 +21,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 //import android.os.StrictMode;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
@@ -32,6 +33,13 @@ import android.widget.Button;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.kobakei.ratethisapp.RateThisApp;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 
 
@@ -282,13 +290,39 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void shareAudio(int songID){
+    private void shareAudio(int songID) {
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
-        int audioID= getFileID(songID);
-        sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("android.resource://" +this.getPackageName() + "/" + audioID));
+        int audioID = getFileID(songID);
+
+        InputStream in = getResources().openRawResource(audioID);
+        String filename = getResources().getResourceEntryName(audioID) + ".mp3";
+        File f= new File(Environment.getExternalStorageDirectory(),filename);
+
+        if (!f.exists()) {
+            try {
+                OutputStream out = new FileOutputStream(f);
+                copyFile(in, out);
+                in.close();
+                out.flush();
+                out.close();
+            } catch (FileNotFoundException e) {
+            } catch (IOException e) {
+            }
+        }
+
         sendIntent.setType("audio/*");
-        startActivity(Intent.createChooser(sendIntent,getResources().getText(R.string.title_activity_second)));
+        Uri uri = Uri.fromFile(new File(Environment.getExternalStorageDirectory(), filename));
+        sendIntent.putExtra(Intent.EXTRA_STREAM,uri);
+        startActivity(Intent.createChooser(sendIntent, getResources().getText(R.string.title_activity_second)));
+    }
+
+    private void copyFile(InputStream in, OutputStream out) throws IOException {
+        byte[] buffer = new byte[1024];
+        int read;
+        while ((read = in.read(buffer)) != -1) {
+            out.write(buffer, 0, read);
+        }
     }
 
     @Override
