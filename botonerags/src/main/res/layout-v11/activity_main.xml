@@ -375,7 +375,7 @@
             android:background="@android:color/transparent"
             style="?android:attr/buttonBarButtonStyle"
             android:textSize="@dimen/button_caption_size"
-            android:text="@string/negros43"
+            android:text="@string/julian"
             android:id="@+id/button20"
             android:layout_marginLeft="19dp"
             android:layout_marginStart="19dp"
