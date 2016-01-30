@@ -55,5 +55,6 @@
     <string name="crash_dialog_text">Hubo un problema durante la ejecución de la aplicación. Por favor, te pido que envíes el mail con la informacion del error. Son solo unos segundos y puede ayudar a encontrar el problema. Muchas gracias!</string>
     <string name="crash_dialog_title">Botonera Gente Sexy tuvo un problema</string>
     <string name="crash_dialog_ok_toast">Estoy feeeliz, eue eue! Gracias por enviar el reporte!</string>
+    <string name="global_tracker">UA-73105734-1</string>
 
 </resources>

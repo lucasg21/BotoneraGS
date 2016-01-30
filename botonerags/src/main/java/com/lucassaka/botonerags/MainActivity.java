@@ -32,6 +32,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 import com.kobakei.ratethisapp.RateThisApp;
 
 import java.io.File;
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Button> soundButtons;
     private SoundPlayer mSoundPlayer;
+    //private Tracker mTracker;
 
 
     private void setSoundButtons(ArrayList<Button> soundCollection) {
@@ -75,6 +78,10 @@ public class MainActivity extends AppCompatActivity {
         config.setMessage(R.string.califica_body);
         RateThisApp.init(config);
 
+        // Obtain the shared Tracker instance.
+        /*MyApplication application = (MyApplication) getApplication();
+        mTracker = application.getDefaultTracker();*/
+
 
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -86,10 +93,12 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
 
-        AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
+        /*AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice("395F39CE8F56D34CBE41785D5F12B2C7")
+                .build();
 
-        mAdView.loadAd(adRequest);
+        mAdView.loadAd(adRequest);*/
         /*if (DEVELOPER_MODE) {
             StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
                     .detectDiskReads()
@@ -229,12 +238,6 @@ public class MainActivity extends AppCompatActivity {
         b31=(Button) findViewById(R.id.button31);
         b31.setLongClickable(true);
         soundButtons.add(30,b31);
-        /*b31.setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
-                Sound sound=(Sound) soundArray[30];
-                mSoundPlayer.playSound(sound);
-            }
-        });*/
 
         b32=(Button) findViewById(R.id.button32);
         b32.setLongClickable(true);
@@ -256,7 +259,7 @@ public class MainActivity extends AppCompatActivity {
         b36.setLongClickable(true);
         soundButtons.add(35,b36);
 
-        b37=(Button) findViewById(R.id.button37);
+        /*b37=(Button) findViewById(R.id.button37);
         b37.setLongClickable(true);
         soundButtons.add(36,b37);
 
@@ -270,7 +273,7 @@ public class MainActivity extends AppCompatActivity {
 
         b40=(Button) findViewById(R.id.button40);
         b40.setLongClickable(true);
-        soundButtons.add(39,b40);
+        soundButtons.add(39,b40);*/
 
         this.createListeners(soundArray);
         this.setLongClickListeners();
@@ -297,6 +300,12 @@ public class MainActivity extends AppCompatActivity {
         RateThisApp.showRateDialogIfNeeded(this);
 
     }
+    @Override
+    public void onResume(){
+        super.onResume();
+        /*mTracker.setScreenName("Image~" + "Pantalla principal");
+        mTracker.send(new HitBuilders.ScreenViewBuilder().build());*/
+    }
 
     private void createListeners(final Sound[] aSoundArray) {
         for(final Button element:soundButtons){
@@ -304,7 +313,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(View v){
                     Sound sound=aSoundArray[soundButtons.indexOf(element)];
                     mSoundPlayer.playSound(sound);
-                    //startSecondActivity(soundButtons.indexOf(element)+ 1);
+                    MyApplication.getInstance().trackEvent("Sonido", "Play", "Track sound button example");
                 }
             });
         }
@@ -520,10 +529,10 @@ public class MainActivity extends AppCompatActivity {
                 nameId=R.raw.bombon;
                 break;
             case 36:
-                nameId=R.raw.amordazada;
-                break;
-            case 37:
                 nameId=R.raw.galopante;
+                break;
+            /*case 37:
+                nameId=R.raw.amordazada;
                 break;
             case 38:
                 nameId=R.raw.ambicion;
@@ -533,7 +542,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 40:
                 nameId=R.raw.enfermedad;
-                break;
+                break;*/
         }
         return nameId;
     }

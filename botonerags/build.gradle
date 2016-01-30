@@ -42,4 +42,6 @@ dependencies {
     compile 'com.google.android.gms:play-services-ads:8.4.0'
     compile 'com.kobakei:ratethisapp:0.0.4'
     compile 'ch.acra:acra:4.6.2'
+    compile 'com.google.android.gms:play-services-analytics:8.4.0'
+
 }

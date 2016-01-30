@@ -6,6 +6,10 @@ import org.acra.ACRA;
 import org.acra.ReportField;
 import org.acra.ReportingInteractionMode;
 import org.acra.annotation.ReportsCrashes;
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.StandardExceptionParser;
+import com.google.android.gms.analytics.Tracker;
 
 /*
  * Copyright (C) 2016 Lucas Gilone
@@ -32,12 +36,66 @@ import org.acra.annotation.ReportsCrashes;
 public class MyApplication extends Application{
 
     private static final String TAG = MyApplication.class.getSimpleName();
+    private Tracker mTracker;
+    private static MyApplication mInstance;
 
+    synchronized public Tracker getDefaultTracker() {
+        if (mTracker == null) {
+            GoogleAnalytics analytics = GoogleAnalytics.getInstance(this);
+            // To enable debug logging use: adb shell setprop log.tag.GAv4 DEBUG
+            mTracker = analytics.newTracker(R.string.global_tracker);
+        }
+        return mTracker;
+    }
+
+    public static synchronized MyApplication getInstance() {
+        return mInstance;
+    }
+
+    public void trackScreenView(String screenName) {
+        Tracker t = getGoogleAnalyticsTracker();
+
+        // Set screen name.
+        t.setScreenName(screenName);
+
+        // Send a screen view.
+        t.send(new HitBuilders.ScreenViewBuilder().build());
+
+        GoogleAnalytics.getInstance(this).dispatchLocalHits();
+    }
+
+    public void trackException(Exception e) {
+        if (e != null) {
+            Tracker t = getGoogleAnalyticsTracker();
+
+            t.send(new HitBuilders.ExceptionBuilder()
+                    .setDescription(
+                            new StandardExceptionParser(this, null)
+                                    .getDescription(Thread.currentThread().getName(), e))
+                    .setFatal(false)
+                    .build()
+            );
+        }
+    }
+    public void trackEvent(String category, String action, String label) {
+        Tracker t = getGoogleAnalyticsTracker();
+
+        // Build and send an Event.
+        t.send(new HitBuilders.EventBuilder().setCategory(category).setAction(action).setLabel(label).build());
+    }
+
+
+    public synchronized Tracker getGoogleAnalyticsTracker() {
+        AnalyticsTrackers analyticsTrackers = AnalyticsTrackers.getInstance();
+        return analyticsTrackers.get(AnalyticsTrackers.Target.APP);
+    }
     @Override
     public void onCreate() {
         super.onCreate();
-
+        mInstance=this;
         // The following line triggers the initialization of ACRA
         ACRA.init(this);
+        AnalyticsTrackers.initialize(this);
+        AnalyticsTrackers.getInstance().get(AnalyticsTrackers.Target.APP);
     }
 }
