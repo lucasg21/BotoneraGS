@@ -33,6 +33,14 @@
         <item>PelotudoFresco</item>
         <item>Fiestas</item>
         <item>EstarAhi</item>
+        <item>Flujo</item>
+        <item>Cuba</item>
+        <item>Bombon</item>
+        <item>Amordazada</item>
+        <item>Galopante</item>
+        <item>Ambicion</item>
+        <item>GenteAdentro</item>
+        <item>Enfermedad</item>
     </string-array>
 
 
@@ -69,6 +77,13 @@
     <item>@raw/pelotudofresco</item>
     <item>@raw/fiestas</item>
     <item>@raw/estarahi</item>
-
+    <item>@raw/flujo</item>
+    <item>@raw/cuba</item>
+    <item>@raw/bombon</item>
+    <item>@raw/amordazada</item>
+    <item>@raw/galopante</item>
+    <item>@raw/ambicion</item>
+    <item>@raw/genteadentro</item>
+    <item>@raw/enfermedad</item>
     </integer-array>
 </resources>

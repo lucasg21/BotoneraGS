@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,b18,b19,b20,b21,b22,b23,b24,b25,b26,b27,b28,b29,b30,b31,b32;
+        Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,b18,b19,b20,b21,b22,b23,b24,b25,b26,b27,b28,b29,b30,b31,b32,b33,b34,b35,b36,b37,b38,b39,b40;
         Toolbar mToolbar;
 
         super.onCreate(savedInstanceState);
@@ -239,6 +239,38 @@ public class MainActivity extends AppCompatActivity {
         b32=(Button) findViewById(R.id.button32);
         b32.setLongClickable(true);
         soundButtons.add(31,b32);
+
+        b33=(Button) findViewById(R.id.button33);
+        b33.setLongClickable(true);
+        soundButtons.add(32,b33);
+
+        b34=(Button) findViewById(R.id.button34);
+        b34.setLongClickable(true);
+        soundButtons.add(33,b34);
+
+        b35=(Button) findViewById(R.id.button35);
+        b35.setLongClickable(true);
+        soundButtons.add(34,b35);
+
+        b36=(Button) findViewById(R.id.button36);
+        b36.setLongClickable(true);
+        soundButtons.add(35,b36);
+
+        b37=(Button) findViewById(R.id.button37);
+        b37.setLongClickable(true);
+        soundButtons.add(36,b37);
+
+        b38=(Button) findViewById(R.id.button38);
+        b38.setLongClickable(true);
+        soundButtons.add(37,b38);
+
+        b39=(Button) findViewById(R.id.button39);
+        b39.setLongClickable(true);
+        soundButtons.add(38,b39);
+
+        b40=(Button) findViewById(R.id.button40);
+        b40.setLongClickable(true);
+        soundButtons.add(39,b40);
 
         this.createListeners(soundArray);
         this.setLongClickListeners();
@@ -477,6 +509,30 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 32:
                 nameId=R.raw.estarahi;
+                break;
+            case 33:
+                nameId=R.raw.flujo;
+                break;
+            case 34:
+                nameId=R.raw.cuba;
+                break;
+            case 35:
+                nameId=R.raw.bombon;
+                break;
+            case 36:
+                nameId=R.raw.amordazada;
+                break;
+            case 37:
+                nameId=R.raw.galopante;
+                break;
+            case 38:
+                nameId=R.raw.ambicion;
+                break;
+            case 39:
+                nameId=R.raw.genteadentro;
+                break;
+            case 40:
+                nameId=R.raw.enfermedad;
                 break;
         }
         return nameId;

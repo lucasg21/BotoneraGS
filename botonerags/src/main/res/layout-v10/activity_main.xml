@@ -563,6 +563,138 @@
             android:layout_weight="1"
             android:layout_gravity="end" />
     </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            android:textSize="@dimen/button_caption_size"
+            android:text="@string/flujo"
+            android:id="@+id/button33"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:layout_gravity="start" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            android:textSize="@dimen/button_caption_size"
+            android:text="@string/cuba"
+            android:id="@+id/button34"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:layout_gravity="end" />
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            android:textSize="@dimen/button_caption_size"
+            android:text="@string/bombon"
+            android:id="@+id/button35"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:layout_gravity="start" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            android:textSize="@dimen/button_caption_size"
+            android:text="@string/amordazada"
+            android:id="@+id/button36"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:layout_gravity="end" />
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            android:textSize="@dimen/button_caption_size"
+            android:text="@string/galopante"
+            android:id="@+id/button37"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:layout_gravity="start" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            android:textSize="@dimen/button_caption_size"
+            android:text="@string/ambicion"
+            android:id="@+id/button38"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:layout_gravity="end" />
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            android:textSize="@dimen/button_caption_size"
+            android:text="@string/genteadentro"
+            android:id="@+id/button39"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:layout_gravity="start" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            android:textSize="@dimen/button_caption_size"
+            android:text="@string/enfermedad"
+            android:id="@+id/button40"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:layout_gravity="end" />
+    </TableRow>
 
 </TableLayout>
 </android.support.v4.widget.NestedScrollView>
