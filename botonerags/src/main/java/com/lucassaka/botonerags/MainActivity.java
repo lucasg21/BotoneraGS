@@ -82,8 +82,6 @@ public class MainActivity extends AppCompatActivity {
         /*MyApplication application = (MyApplication) getApplication();
         mTracker = application.getDefaultTracker();*/
 
-
-
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
 
@@ -259,7 +257,7 @@ public class MainActivity extends AppCompatActivity {
         b36.setLongClickable(true);
         soundButtons.add(35,b36);
 
-        /*b37=(Button) findViewById(R.id.button37);
+        b37=(Button) findViewById(R.id.button37);
         b37.setLongClickable(true);
         soundButtons.add(36,b37);
 
@@ -267,7 +265,7 @@ public class MainActivity extends AppCompatActivity {
         b38.setLongClickable(true);
         soundButtons.add(37,b38);
 
-        b39=(Button) findViewById(R.id.button39);
+        /*b39=(Button) findViewById(R.id.button39);
         b39.setLongClickable(true);
         soundButtons.add(38,b39);
 
@@ -530,6 +528,12 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 36:
                 nameId=R.raw.galopante;
+                break;
+            case 37:
+                nameId=R.raw.genteadentro;
+                break;
+            case 38:
+                nameId=R.raw.garin;
                 break;
             /*case 37:
                 nameId=R.raw.amordazada;

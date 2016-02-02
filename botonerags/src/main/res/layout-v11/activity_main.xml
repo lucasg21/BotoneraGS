@@ -664,6 +664,41 @@
             android:layout_weight="1"
             android:layout_gravity="end" />
     </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="@dimen/button_caption_size"
+            android:text="@string/genteadentro"
+            android:id="@+id/button37"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:layout_gravity="start" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="@dimen/button_caption_size"
+            android:text="@string/garin"
+            android:id="@+id/button38"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:layout_gravity="start" />
+    </TableRow>
 </TableLayout>
 </android.support.v4.widget.NestedScrollView>
 

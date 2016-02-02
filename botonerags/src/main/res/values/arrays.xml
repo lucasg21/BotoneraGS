@@ -37,9 +37,10 @@
         <item>Cuba</item>
         <item>Bombon</item>
         <item>Galopante</item>
+        <item>GenteAdentro</item>
+        <item>Garin</item>
         <!--<item>Amordazada</item>
         <item>Ambicion</item>
-        <item>GenteAdentro</item>
         <item>Enfermedad</item>-->
     </string-array>
 
@@ -81,6 +82,8 @@
     <item>@raw/cuba</item>
     <item>@raw/bombon</item>
     <item>@raw/galopante</item>
+    <item>@raw/genteadentro</item>
+    <item>@raw/garin</item>
     <!--<item>@raw/amordazada</item>
     <item>@raw/ambicion</item>
     <item>@raw/genteadentro</item>
