@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,b18,b19,b20,b21,b22,b23,b24,b25,b26,b27,b28,b29,b30,b31,b32,b33,b34,b35,b36,b37,b38,b39,b40;
+        Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,b18,b19,b20,b21,b22,b23,b24,b25,b26,b27,b28,b29,b30,b31,b32,b33,b34,b35,b36,b37,b38,b39,b40,b41,b42,b43,b44,b45,b46,b47,b48,b49,b50;
         Toolbar mToolbar;
 
         super.onCreate(savedInstanceState);
@@ -112,7 +112,6 @@ public class MainActivity extends AppCompatActivity {
 
         this.setSoundButtons(new ArrayList<Button>());
 
-        //b1 =(Button) findViewById(R.id.button1);
         b1=(Button) findViewById(R.id.button1);
         b1.setLongClickable(true);
         soundButtons.add(0,b1);
@@ -265,16 +264,56 @@ public class MainActivity extends AppCompatActivity {
         b38.setLongClickable(true);
         soundButtons.add(37,b38);
 
-        /*b39=(Button) findViewById(R.id.button39);
+        b39=(Button) findViewById(R.id.button39);
         b39.setLongClickable(true);
         soundButtons.add(38,b39);
 
         b40=(Button) findViewById(R.id.button40);
         b40.setLongClickable(true);
-        soundButtons.add(39,b40);*/
+        soundButtons.add(39,b40);
+
+        b41=(Button) findViewById(R.id.button41);
+        b41.setLongClickable(true);
+        soundButtons.add(40,b41);
+
+        b42=(Button) findViewById(R.id.button42);
+        b42.setLongClickable(true);
+        soundButtons.add(41,b42);
+
+        b43=(Button) findViewById(R.id.button43);
+        b43.setLongClickable(true);
+        soundButtons.add(42,b43);
+
+        b44=(Button) findViewById(R.id.button44);
+        b44.setLongClickable(true);
+        soundButtons.add(43,b44);
+
+        b45=(Button) findViewById(R.id.button45);
+        b45.setLongClickable(true);
+        soundButtons.add(44,b45);
+
+        b46=(Button) findViewById(R.id.button46);
+        b46.setLongClickable(true);
+        soundButtons.add(45,b46);
+
+        b47=(Button) findViewById(R.id.button47);
+        b47.setLongClickable(true);
+        soundButtons.add(46,b47);
+
+        b48=(Button) findViewById(R.id.button48);
+        b48.setLongClickable(true);
+        soundButtons.add(47,b48);
+
+        b49=(Button) findViewById(R.id.button49);
+        b49.setLongClickable(true);
+        soundButtons.add(48,b49);
+
+        b50=(Button) findViewById(R.id.button50);
+        b50.setLongClickable(true);
+        soundButtons.add(49,b50);
 
         this.createListeners(soundArray);
-        this.setLongClickListeners();
+        this.setLongClickListeners(soundArray);
 
     }
 
@@ -311,18 +350,19 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(View v){
                     Sound sound=aSoundArray[soundButtons.indexOf(element)];
                     mSoundPlayer.playSound(sound);
-                    MyApplication.getInstance().trackEvent("Sonido", "Play", "Track sound button example");
+                    MyApplication.getInstance().trackEvent("Sonido", "Play",sound.getName());
                 }
             });
         }
     }
 
-    private void setLongClickListeners(){
+    private void setLongClickListeners(final Sound[] aSoundArray){
         for(final Button element:soundButtons){
             element.setOnLongClickListener(new View.OnLongClickListener(){
                 @Override
                 public boolean onLongClick(View v){
                     shareAudio(soundButtons.indexOf(element)+ 1);
+                    MyApplication.getInstance().trackEvent("Sonido", "Share",aSoundArray[soundButtons.indexOf(element)].getName());
                     return true;
                 }
             });
@@ -535,18 +575,42 @@ public class MainActivity extends AppCompatActivity {
             case 38:
                 nameId=R.raw.garin;
                 break;
-            /*case 37:
-                nameId=R.raw.amordazada;
-                break;
-            case 38:
-                nameId=R.raw.ambicion;
-                break;
             case 39:
-                nameId=R.raw.genteadentro;
+                nameId=R.raw.amordazada1;
                 break;
             case 40:
+                nameId=R.raw.amordazada2;
+                break;
+            case 41:
+                nameId=R.raw.ambicion;
+                break;
+            case 42:
                 nameId=R.raw.enfermedad;
-                break;*/
+                break;
+            case 43:
+                nameId=R.raw.sabinacorre;
+                break;
+            case 44:
+                nameId=R.raw.alapapa;
+                break;
+            case 45:
+                nameId=R.raw.risafresco;
+                break;
+            case 46:
+                nameId=R.raw.audiojoe;
+                break;
+            case 47:
+                nameId=R.raw.balsamo;
+                break;
+            case 48:
+                nameId=R.raw.porlasentradas;
+                break;
+            case 49:
+                nameId=R.raw.diez47;
+                break;
+            case 50:
+                nameId=R.raw.asadofrio;
+                break;
         }
         return nameId;
     }

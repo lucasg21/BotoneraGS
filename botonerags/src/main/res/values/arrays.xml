@@ -39,9 +39,18 @@
         <item>Galopante</item>
         <item>GenteAdentro</item>
         <item>Garin</item>
-        <!--<item>Amordazada</item>
+        <item>Amordazada1</item>
+        <item>Amordazada2</item>
         <item>Ambicion</item>
-        <item>Enfermedad</item>-->
+        <item>Enfermedad</item>
+        <item>SabinaCorre</item>
+        <item>ALaPapa</item>
+        <item>RisaFresco</item>
+        <item>AudioJoe</item>
+        <item>Balsamo</item>
+        <item>PorLasEntradas</item>
+        <item>Diez47</item>
+        <item>AsadoFrio</item>
     </string-array>
 
 
@@ -84,9 +93,17 @@
     <item>@raw/galopante</item>
     <item>@raw/genteadentro</item>
     <item>@raw/garin</item>
-    <!--<item>@raw/amordazada</item>
+    <item>@raw/amordazada1</item>
+    <item>@raw/amordazada2</item>
     <item>@raw/ambicion</item>
-    <item>@raw/genteadentro</item>
-    <item>@raw/enfermedad</item>-->
+    <item>@raw/enfermedad</item>
+    <item>@raw/sabinacorre</item>
+    <item>@raw/alapapa</item>
+    <item>@raw/risafresco</item>
+    <item>@raw/audiojoe</item>
+    <item>@raw/balsamo</item>
+    <item>@raw/porlasentradas</item>
+    <item>@raw/diez47</item>
+    <item>@raw/asadofrio</item>
     </integer-array>
 </resources>

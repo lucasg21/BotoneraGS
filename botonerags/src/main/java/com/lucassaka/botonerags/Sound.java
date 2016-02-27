@@ -31,13 +31,13 @@ public class Sound {
 
     /*public void setResourceId(int resourceId) {
         this.mResourceId = resourceId;
-    }
+    }*/
 
     public String getName() {
         return mName;
     }
 
-    public void setName(String name) {
+    /*public void setName(String name) {
         this.mName = name;
     }*/
 

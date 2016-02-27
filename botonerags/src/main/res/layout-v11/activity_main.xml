@@ -699,6 +699,217 @@
             android:layout_weight="1"
             android:layout_gravity="start" />
     </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="@dimen/button_caption_size"
+            android:text="@string/amordazada1"
+            android:id="@+id/button39"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:layout_gravity="start" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="@dimen/button_caption_size"
+            android:text="@string/amordazada2"
+            android:id="@+id/button40"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:layout_gravity="start" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/tresempanadasicon"
+        android:background="@android:color/transparent"
+        style="?android:attr/buttonBarButtonStyle"
+        android:textSize="@dimen/button_caption_size"
+        android:text="@string/ambicion"
+        android:id="@+id/button41"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="19dp"
+        android:layout_column="0"
+        android:layout_weight="1"
+        android:layout_gravity="start" />
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/tresempanadasicon"
+        android:background="@android:color/transparent"
+        style="?android:attr/buttonBarButtonStyle"
+        android:textSize="@dimen/button_caption_size"
+        android:text="@string/enfermedad"
+        android:id="@+id/button42"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="19dp"
+        android:layout_column="0"
+        android:layout_weight="1"
+        android:layout_gravity="start" />
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="@dimen/button_caption_size"
+            android:text="@string/sabinacorre"
+            android:id="@+id/button43"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:layout_gravity="start" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="@dimen/button_caption_size"
+            android:text="@string/alapapa"
+            android:id="@+id/button44"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:layout_gravity="start" />
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="@dimen/button_caption_size"
+            android:text="@string/risafresco"
+            android:id="@+id/button45"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:layout_gravity="start" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="@dimen/button_caption_size"
+            android:text="@string/audiojoe"
+            android:id="@+id/button46"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:layout_gravity="start" />
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="@dimen/button_caption_size"
+            android:text="@string/balsamo"
+            android:id="@+id/button47"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:layout_gravity="start" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="@dimen/button_caption_size"
+            android:text="@string/porlasentradas"
+            android:id="@+id/button48"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:layout_gravity="start" />
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="@dimen/button_caption_size"
+            android:text="@string/diez47"
+            android:id="@+id/button49"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:layout_gravity="start" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/tresempanadasicon"
+            android:background="@android:color/transparent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="@dimen/button_caption_size"
+            android:text="@string/asadofrio"
+            android:id="@+id/button50"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:layout_gravity="start" />
+    </TableRow>
 </TableLayout>
 </android.support.v4.widget.NestedScrollView>
 
