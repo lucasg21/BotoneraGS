@@ -66,5 +66,11 @@
     <string name="crash_dialog_title">Botonera Gente Sexy tuvo un problema</string>
     <string name="crash_dialog_ok_toast">Estoy feeeliz, eue eue! Gracias por enviar el reporte!</string>
     <string name="global_tracker">UA-73105734-1</string>
+    <string name="permission_external_ringtone">Se requieren permisos extra(escritura en SD y modificacion de ajustes del sistema)necesarios para poder guardar los audios como ringtoness a partir de Android 6. Por favor, autoriza los permisos que se piden a continuación por única vez y listo.Quedate tranquilo, es para lo único que se necesita.</string>
+    <string name="permission_request_title">¿Quién só\'? ¿Julio Grondona?</string>
+    <string name="button_allow">Dejame jugar</string>
+    <string name="button_deny">Permiso rechazado, enano cobani</string>
+    <string name="permission_writing_denied">Permisos rechazados. No vas a poder usar setear ningún sonido como ringtone.</string>
+    <string name="permission_writing_neverask">Nunca mas se te van a preguntar por estos permisos.Vas a necesitar activarlos desde los ajustes del sistema(opcion Apps) para poder usarlos como ringtones!</string>
 
 </resources>

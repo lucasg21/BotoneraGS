@@ -1,56 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="labels">
-        <item>NestorEsta</item>
-        <item>NestorMorir</item>
-        <item>Como</item>
-        <item>PorDios</item>
-        <item>PeroSenor</item>
-        <item>ComoProgresaste</item>
-        <item>RicaAmarga</item>
-        <item>HableSenor</item>
-        <item>UdEsUnPelotudo</item>
-        <item>Cipayo</item>
-        <item>DeQueHabla</item>
-        <item>OtroDia</item>
-        <item>Cachetes</item>
-        <item>GordoTravesti</item>
-        <item>GordoMerquero</item>
-        <item>EueEue</item>
-        <item>Luppi</item>
-        <item>MilCasos</item>
-        <item>EnElAire</item>
-        <item>Julian</item>
-        <item>ComoSenor</item>
-        <item>MemeLasPelotas</item>
-        <item>FamiliaPelotudos</item>
-        <item>SosMersa</item>
-        <item>NoTeAguanto</item>
-        <item>BoludoPelotudo</item>
-        <item>SeVenNegras</item>
-        <item>NegroIndigena</item>
-        <item>Loco</item>
-        <item>PelotudoFresco</item>
-        <item>Fiestas</item>
-        <item>EstarAhi</item>
-        <item>Flujo</item>
-        <item>Cuba</item>
-        <item>Bombon</item>
-        <item>Galopante</item>
-        <item>GenteAdentro</item>
-        <item>Garin</item>
-        <item>Amordazada1</item>
-        <item>Amordazada2</item>
-        <item>Ambicion</item>
-        <item>Enfermedad</item>
-        <item>SabinaCorre</item>
-        <item>ALaPapa</item>
-        <item>RisaFresco</item>
-        <item>AudioJoe</item>
-        <item>Balsamo</item>
-        <item>PorLasEntradas</item>
-        <item>Diez47</item>
-        <item>AsadoFrio</item>
+        <item>¿Y Nestor está?</item>
+        <item>Nestor acaba de morir</item>
+        <item>¡¿Cómo?!</item>
+        <item>Uf, por Diós</item>
+        <item>¡Pero Senor!</item>
+        <item>Como progresaste</item>
+        <item>Rica rica, amarga</item>
+        <item>Hable señor!</item>
+        <item>Pero usted es un pelotudo!</item>
+        <item>Pelotudo y cipayo</item>
+        <item>No se de que habla</item>
+        <item>Otro día hablamos</item>
+        <item>Gordo tirate un pedo</item>
+        <item>Gordo 2</item>
+        <item>Gordo Merquero</item>
+        <item>Eue eue!</item>
+        <item>¿Y Luppi conocía esta historia?</item>
+        <item>Conozco mil casos</item>
+        <item>Pero estamos en el aire</item>
+        <item>Julian p*to</item>
+        <item>¿Como senor?</item>
+        <item>Me me me las pelotas</item>
+        <item>Familia de pelotudos</item>
+        <item>Sos mersa</item>
+        <item>No te aguanto</item>
+        <item>Callate, boludo pelotudo</item>
+        <item>Se pueden ver que son negras</item>
+        <item>Fresco - Negro</item>
+        <item>Me vuelvo loco</item>
+        <item>Pelotudo</item>
+        <item>Las fiestas..</item>
+        <item>Quiero estar ahí</item>
+        <item>Tengo mucho flujo</item>
+        <item>Niembro - A Cuba</item>
+        <item>Chorizo bombon</item>
+        <item>Sos un hijo de mil..</item>
+        <item>Gente ahí adentro</item>
+        <item>Localidad de Garin</item>
+        <item>Amordazada 1</item>
+        <item>Amordazada 2</item>
+        <item>Paren con la ambición!</item>
+        <item>Jugando con mi enfermedad</item>
+        <item>Sabina corre</item>
+        <item>A la papa</item>
+        <item>Risa del fresco</item>
+        <item>Audio de Joe</item>
+        <item>Son un balsamo</item>
+        <item>Por las entradas</item>
+        <item>Son las 10:47</item>
+        <item>Asado frío</item>
     </string-array>
 
 
