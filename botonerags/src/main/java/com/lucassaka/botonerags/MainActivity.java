@@ -37,6 +37,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.kobakei.ratethisapp.RateThisApp;
 
 import java.io.File;
@@ -97,12 +99,13 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
 
-        /*AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
                 .addTestDevice("395F39CE8F56D34CBE41785D5F12B2C7")
                 .build();
 
-        mAdView.loadAd(adRequest);*/
+        mAdView.loadAd(adRequest);
         /*if (DEVELOPER_MODE) {
             StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
                     .detectDiskReads()
