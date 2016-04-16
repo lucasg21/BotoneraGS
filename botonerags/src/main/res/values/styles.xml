@@ -35,5 +35,17 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">#1A237E</item>
+        <item name="tabSelectedTextColor">#1A237E</item>
+        <item name="tabTextAppearance">@style/MyCustomTabTextAppearance</item>
+    </style>
+
+    <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
     <style name="Theme.Dialog" parent="@android:style/Theme.Dialog" />
 </resources>

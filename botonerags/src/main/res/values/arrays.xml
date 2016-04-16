@@ -51,6 +51,20 @@
         <item>Por las entradas</item>
         <item>Son las 10:47</item>
         <item>Asado frío</item>
+        <item>Bueno</item>
+        <item>No lo sé</item>
+        <item>Que chiste malo</item>
+        <item>Mil disculpas</item>
+        <item>Lo do huevo</item>
+        <item>Aca mando yo</item>
+        <item>Que hdp</item>
+        <item>Camara de gas</item>
+        <item>Para internar</item>
+        <item>Lo hicimos</item>
+        <item>Unos estafadores</item>
+        <item>Bobo</item>
+        <item>Decepcionado totalmente</item>
+        <item>Monumento al pelotudo</item>
     </string-array>
 
 
@@ -105,5 +119,19 @@
     <item>@raw/porlasentradas</item>
     <item>@raw/diez47</item>
     <item>@raw/asadofrio</item>
+    <item>@raw/bueno</item>
+    <item>@raw/nolose</item>
+    <item>@raw/chistemalo</item>
+    <item>@raw/mildisculpas</item>
+    <item>@raw/lodohuevo</item>
+    <item>@raw/acamandoyo</item>
+    <item>@raw/quehdp</item>
+    <item>@raw/camaragas</item>
+    <item>@raw/parainternar</item>
+    <item>@raw/lohicimos</item>
+    <item>@raw/estafadores</item>
+    <item>@raw/bobo</item>
+    <item>@raw/decepcionadototalmente</item>
+    <item>@raw/monumento</item>
     </integer-array>
 </resources>

@@ -72,5 +72,20 @@
     <string name="button_deny">Permiso rechazado, enano cobani</string>
     <string name="permission_writing_denied">Permisos rechazados. No vas a poder usar setear ningún sonido como ringtone.</string>
     <string name="permission_writing_neverask">Nunca mas se te van a preguntar por estos permisos.Vas a necesitar activarlos desde los ajustes del sistema(opcion Apps) para poder usarlos como ringtones!</string>
+    <string name="bueno">Bueno</string>
+    <string name="nolose">No lo sé</string>
+    <string name="chistemalo">Que chiste malo</string>
+    <string name="mildisculpas">Mil disculpas</string>
+    <string name="lodohuevo">Lo do\' huevo\'</string>
+    <string name="mandoyo">Acá mando yo</string>
+    <string name="quehdp">Que hdp</string>
+    <string name="camaragas">Cámara de gas</string>
+    <string name="parainternar">Para internar</string>
+    <string name="lohicimos">Lo hicimos</string>
+    <string name="estafadores">Unos estafadores</string>
+    <string name="bobo">Bobo</string>
+    <string name="decepcionadototalmente">Decepcionado totalmente</string>
+    <string name="monumento">Monumento al pelotudo</string>
+    <string name="msgSpotify">¿Escuchaste una cumbia en Tres Empanadas y se te quedó pegada todo el día? ¡Escuchá la playlist en Spotify!</string>
 
 </resources>
