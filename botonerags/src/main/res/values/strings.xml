@@ -86,6 +86,6 @@
     <string name="bobo">Bobo</string>
     <string name="decepcionadototalmente">Decepcionado totalmente</string>
     <string name="monumento">Monumento al pelotudo</string>
-    <string name="msgSpotify">¿Escuchaste una cumbia en Tres Empanadas y se te quedó pegada todo el día? ¡Escuchá la playlist en Spotify!</string>
+    <string name="msgSpotify">¿Escuchaste una canción en Tres Empanadas y se te quedó pegada todo el día?\n ¡Hace click en el botón y escuchá la playlist en Spotify!</string>
 
 </resources>

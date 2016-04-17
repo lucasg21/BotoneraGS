@@ -70,14 +70,6 @@ public class SongFragment extends Fragment{
                         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + appPackageName)));
                     }
                 }
-                /*try {
-                    wait(3000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }*/
-                /*final Intent intent2= new Intent("com.spotify.mobile.android.ui.widget.NEXT");
-                intent2.setPackage("com.spotify.music");
-                getContext().sendOrderedBroadcast(intent2,null);*/
             }
         });
 
