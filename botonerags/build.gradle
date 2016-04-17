@@ -16,8 +16,8 @@ android {
         applicationId "com.lucassaka.botonerags"
         minSdkVersion 10
         targetSdkVersion 23
-        versionCode 4
-        versionName "1.5"
+        versionCode 5
+        versionName "2.0.0"
     }
     buildTypes {
         release {

@@ -65,6 +65,8 @@
         <item>Bobo</item>
         <item>Decepcionado totalmente</item>
         <item>Monumento al pelotudo</item>
+        <item>Un riquisimo pollo</item>
+        <item>Elio Rossi 1</item>
     </string-array>
 
 
@@ -133,5 +135,7 @@
     <item>@raw/bobo</item>
     <item>@raw/decepcionadototalmente</item>
     <item>@raw/monumento</item>
+    <item>@raw/poio</item>
+    <item>@raw/elio1</item>
     </integer-array>
 </resources>
