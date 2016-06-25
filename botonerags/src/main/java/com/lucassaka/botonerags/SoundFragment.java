@@ -59,7 +59,7 @@ public class SoundFragment extends android.support.v4.app.Fragment {
         // Inflate the layout for this fragment
         View buttonsView= inflater.inflate(R.layout.activity_buttons, container, false);
 
-        Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15, b16, b17, b18, b19, b20, b21, b22, b23, b24, b25, b26, b27, b28, b29, b30, b31, b32, b33, b34, b35, b36, b37, b38, b39, b40, b41, b42, b43, b44, b45, b46, b47, b48, b49, b50 ,b51 ,b52 ,b53 ,b54 ,b55 ,b56 ,b57 ,b58 ,b59 ,b60 ,b61 ,b62 ,b63 ,b64,b65,b66;
+        Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15, b16, b17, b18, b19, b20, b21, b22, b23, b24, b25, b26, b27, b28, b29, b30, b31, b32, b33, b34, b35, b36, b37, b38, b39, b40, b41, b42, b43, b44, b45, b46, b47, b48, b49, b50 ,b51 ,b52 ,b53 ,b54 ,b55 ,b56 ,b57 ,b58 ,b59 ,b60 ,b61 ,b62 ,b63 ,b64,b65,b66,b67,b68,b69,b70,b71,b72,b73,b74,b75,b76,b77,b78,b79,b80,b81,b82,b83,b84,b85,b86,b87,b88,b89,b90,b91,b92,b93,b94,b95,b96;
 
         mSoundPlayer = new SoundPlayer(this.getContext());
         final Sound[] soundArray = SoundStore.getSounds(this.getContext());
@@ -329,6 +329,127 @@ public class SoundFragment extends android.support.v4.app.Fragment {
         b66=  (Button) buttonsView.findViewById(R.id.button66);
         b66.setLongClickable(true);
         soundButtons.add(65,b66);
+
+        b67=  (Button) buttonsView.findViewById(R.id.button67);
+        b67.setLongClickable(true);
+        soundButtons.add(66,b67);
+
+        b68=  (Button) buttonsView.findViewById(R.id.button68);
+        b68.setLongClickable(true);
+        soundButtons.add(67,b68);
+
+        b69=  (Button) buttonsView.findViewById(R.id.button69);
+        b69.setLongClickable(true);
+        soundButtons.add(68,b69);
+
+        b70=  (Button) buttonsView.findViewById(R.id.button70);
+        b70.setLongClickable(true);
+        soundButtons.add(69,b70);
+
+        b71=  (Button) buttonsView.findViewById(R.id.button71);
+        b71.setLongClickable(true);
+        soundButtons.add(70,b71);
+
+        b72=  (Button) buttonsView.findViewById(R.id.button72);
+        b72.setLongClickable(true);
+        soundButtons.add(71,b72);
+
+        b73=  (Button) buttonsView.findViewById(R.id.button73);
+        b73.setLongClickable(true);
+        soundButtons.add(72,b73);
+
+        b74=  (Button) buttonsView.findViewById(R.id.button74);
+        b74.setLongClickable(true);
+        soundButtons.add(73,b74);
+
+        b75=  (Button) buttonsView.findViewById(R.id.button75);
+        b75.setLongClickable(true);
+        soundButtons.add(74,b75);
+
+        b76=  (Button) buttonsView.findViewById(R.id.button76);
+        b76.setLongClickable(true);
+        soundButtons.add(75,b76);
+
+        b77=  (Button) buttonsView.findViewById(R.id.button77);
+        b77.setLongClickable(true);
+        soundButtons.add(76,b77);
+
+        b78=  (Button) buttonsView.findViewById(R.id.button78);
+        b78.setLongClickable(true);
+        soundButtons.add(77,b78);
+
+        b79=  (Button) buttonsView.findViewById(R.id.button79);
+        b79.setLongClickable(true);
+        soundButtons.add(78,b79);
+
+        b80=  (Button) buttonsView.findViewById(R.id.button80);
+        b80.setLongClickable(true);
+        soundButtons.add(79,b80);
+
+        b81=  (Button) buttonsView.findViewById(R.id.button81);
+        b81.setLongClickable(true);
+        soundButtons.add(80,b81);
+
+        b82=  (Button) buttonsView.findViewById(R.id.button82);
+        b82.setLongClickable(true);
+        soundButtons.add(81,b82);
+
+        b83=  (Button) buttonsView.findViewById(R.id.button83);
+        b83.setLongClickable(true);
+        soundButtons.add(82,b83);
+
+        b84=  (Button) buttonsView.findViewById(R.id.button84);
+        b84.setLongClickable(true);
+        soundButtons.add(83,b84);
+
+        b85=  (Button) buttonsView.findViewById(R.id.button85);
+        b85.setLongClickable(true);
+        soundButtons.add(84,b85);
+
+        b86=  (Button) buttonsView.findViewById(R.id.button86);
+        b86.setLongClickable(true);
+        soundButtons.add(85,b86);
+
+        b87=  (Button) buttonsView.findViewById(R.id.button87);
+        b87.setLongClickable(true);
+        soundButtons.add(86,b87);
+
+        b88=  (Button) buttonsView.findViewById(R.id.button88);
+        b88.setLongClickable(true);
+        soundButtons.add(87,b88);
+
+        b89=  (Button) buttonsView.findViewById(R.id.button89);
+        b89.setLongClickable(true);
+        soundButtons.add(88,b89);
+
+        b90=  (Button) buttonsView.findViewById(R.id.button90);
+        b90.setLongClickable(true);
+        soundButtons.add(89,b90);
+
+        b91=  (Button) buttonsView.findViewById(R.id.button91);
+        b91.setLongClickable(true);
+        soundButtons.add(90,b91);
+
+        b92=  (Button) buttonsView.findViewById(R.id.button92);
+        b92.setLongClickable(true);
+        soundButtons.add(91,b92);
+
+        b93=  (Button) buttonsView.findViewById(R.id.button93);
+        b93.setLongClickable(true);
+        soundButtons.add(92,b93);
+
+        b94=  (Button) buttonsView.findViewById(R.id.button94);
+        b94.setLongClickable(true);
+        soundButtons.add(93,b94);
+
+        b95=  (Button) buttonsView.findViewById(R.id.button95);
+        b95.setLongClickable(true);
+        soundButtons.add(94,b95);
+
+        b96=  (Button) buttonsView.findViewById(R.id.button96);
+        b96.setLongClickable(true);
+        soundButtons.add(95,b96);
+
 
         this.createListeners(soundArray);
         this.setLongClickListeners(soundArray);

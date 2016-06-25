@@ -67,6 +67,36 @@
         <item>Monumento al pelotudo</item>
         <item>Un riquisimo pollo</item>
         <item>Elio Rossi 1</item>
+        <item>Julio Grondona</item>
+        <item>Selena Gomez</item>
+        <item>Paulo Vilouta</item>
+        <item>Gordo ACV</item>
+        <item>Joe ahí también</item>
+        <item>Gordo come chancho</item>
+        <item>Lengua dormida</item>
+        <item>Te cobran hijo</item>
+        <item>El fracaso de Osvaldo</item>
+        <item>¡¿Quién?!</item>
+        <item>Hector Maugeri</item>
+        <item>Leo, a tomar la leche</item>
+        <item>Son todos técnicos acá</item>
+        <item>Gordo trauma</item>
+        <item>Bien de marica</item>
+        <item>Es un cagon</item>
+        <item>Rocío G.Diaz</item>
+        <item>Laburar lechón</item>
+        <item>Gracias macri</item>
+        <item>Como se juntaron</item>
+        <item>Soy Ricardo Iorio</item>
+        <item>Escabiar escabiar escabiar</item>
+        <item>Vamos M*n*m</item>
+        <item>Sr Laverni</item>
+        <item>¡Viva Jujuy!</item>
+        <item>Con la reina, la 1.</item>
+        <item>Che cuca</item>
+        <item>Guido, a tomar la leche</item>
+        <item>Pasaporte boliviano</item>
+        <item>Gana un mundial Messi</item>
     </string-array>
 
 
@@ -137,5 +167,35 @@
     <item>@raw/monumento</item>
     <item>@raw/poio</item>
     <item>@raw/elio1</item>
+    <item>@raw/juliogrondona</item>
+    <item>@raw/selenagomez</item>
+    <item>@raw/paulovilouta</item>
+    <item>@raw/gordoacv</item>
+    <item>@raw/estajoeahi</item>
+    <item>@raw/comechancho</item>
+    <item>@raw/lenguadormida</item>
+    <item>@raw/tecobran</item>
+    <item>@raw/fracasosvaldo</item>
+    <item>@raw/quien</item>
+    <item>@raw/maugeri</item>
+    <item>@raw/leotomar</item>
+    <item>@raw/todostecnicos</item>
+    <item>@raw/gordotrauma</item>
+    <item>@raw/carusobdmarica</item>
+    <item>@raw/carusocagon</item>
+    <item>@raw/rocioguiraodiaz</item>
+    <item>@raw/laburarlechon</item>
+    <item>@raw/graciasmacri</item>
+    <item>@raw/comosejuntaron</item>
+    <item>@raw/ricardoiorio</item>
+    <item>@raw/escabiar</item>
+    <item>@raw/vamosmendez</item>
+    <item>@raw/laverni</item>
+    <item>@raw/vivajujuy</item>
+    <item>@raw/lanumerouno</item>
+    <item>@raw/checuca</item>
+    <item>@raw/guidotomar</item>
+    <item>@raw/pasaporteboliviano</item>
+    <item>@raw/mundialmessi</item>
     </integer-array>
 </resources>
