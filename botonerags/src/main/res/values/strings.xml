@@ -86,7 +86,7 @@
     <string name="bobo">Bobo</string>
     <string name="decepcionadototalmente">Decepcionado totalmente</string>
     <string name="monumento">Monumento al pelotudo</string>
-    <string name="msgSpotify">¿Escuchaste una canción en Tres Empanadas y se te quedó pegada todo el día?\n ¡Hace click en el botón y escuchá la playlist en Spotify!</string>
+    <string name="msgSpotify">¿Escuchaste una canción en Tres Empanadas y se te quedó pegada todo el día?\n ¡Escuchá la playlist en Spotify o en YouTube!</string>
     <string name="poio">Un riquisimo pollo</string>
     <string name="eliorossi">Elio Rossi 1</string>
     <string name="juliogrondona">Quien só ? Julio Grondona?</string>
@@ -119,5 +119,6 @@
     <string name="guidoatomar">Guido a tomar</string>
     <string name="pasaporteboliviano">Pasaporte boliviano</string>
     <string name="mundialmessi">Gana un mundial</string>
+    <string name="search_hint">Busca</string>
 
 </resources>

@@ -26,4 +26,14 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_youtube"
+        android:id="@+id/youtubebutton"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_below="@+id/spotifyButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>

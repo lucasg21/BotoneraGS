@@ -47,9 +47,11 @@ public class SongFragment extends Fragment{
 
         PackageManager pm = this.getContext().getPackageManager();
         final boolean isSpotifyInstalled = isPackageInstalled("com.spotify.music", pm);
+        final boolean isYoutubeInstalled = isPackageInstalled("com.google.android.youtube",pm);
 
-        ImageButton spotifyBtn;
+        ImageButton spotifyBtn,youtubeBtn;
         spotifyBtn=(ImageButton)SongsView.findViewById(R.id.spotifyButton);
+        youtubeBtn=(ImageButton)SongsView.findViewById(R.id.youtubebutton);
         spotifyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,6 +71,22 @@ public class SongFragment extends Fragment{
                     } catch (android.content.ActivityNotFoundException anfe) {
                         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + appPackageName)));
                     }
+                }
+            }
+        });
+        youtubeBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                final Intent youtubeIntent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.youtube.com/playlist?list=PLrdwfz_zMFwiy7VheEmBM1hYpG8Fy5byG"));
+                if(isYoutubeInstalled){
+                    MyApplication.getInstance().trackEvent("Cancion", "Play", "Playlist Youtube");
+                    youtubeIntent.setPackage("com.google.android.youtube");
+                    startActivity(youtubeIntent);
+                }
+                else{
+                    MyApplication.getInstance().trackEvent("Cancion", "Play", "Youtube uninstalled");
+                    Toast.makeText(getContext(),"Instala la app de YouTube para poder escuchar la playlist sin tener que usar un browser",Toast.LENGTH_LONG).show();
+                    startActivity(youtubeIntent);
                 }
             }
         });
