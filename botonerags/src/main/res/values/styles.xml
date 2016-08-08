@@ -48,4 +48,7 @@
     </style>
 
     <style name="Theme.Dialog" parent="@android:style/Theme.Dialog" />
+
+    <style name="InteractionTheme" parent="android:Theme.NoDisplay">
+    </style>
 </resources>
