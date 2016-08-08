@@ -9,9 +9,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/view2">
-        <include
-            android:id="@+id/toolbar"
-            layout="@layout/toolbar" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_navigation_arrow_back"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Toolbar.TitleText"
+            android:layout_toRightOf="@id/backButton"
+            android:layout_toEndOf="@id/backButton"
+            android:id="@+id/tituloBusqueda"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp" />
+    </RelativeLayout>
     </android.support.design.widget.AppBarLayout>
 
     <ListView
@@ -20,6 +36,8 @@
         android:layout_above="@+id/adView"
         android:layout_below="@+id/view2"
         android:id="@android:id/list"
+        android:longClickable="true"
+        android:clickable="true"
         android:layout_gravity="center_horizontal" />
 
     <com.google.android.gms.ads.AdView

@@ -49,6 +49,11 @@
                 android:resource="@xml/searchable"/>
         </activity>
 
+        <activity
+            android:name="com.lucassaka.botonerags.SoundInteractionActivity"
+>
+        </activity>
+
         <activity android:name="org.acra.CrashReportDialog"
             android:theme="@style/Theme.Dialog"
             android:process=":error_report"

@@ -19,10 +19,12 @@ package com.lucassaka.botonerags;
 public class Sound {
     private final String mName;
     private final int mResourceId;
+    private final int mButtonId;
 
-    public Sound(String name, int resourceId) {
+    public Sound(String name, int resourceId,int buttonId) {
         this.mName = name;
         this.mResourceId = resourceId;
+        this.mButtonId=buttonId;
     }
 
     public int getResourceId() {
@@ -35,6 +37,10 @@ public class Sound {
 
     public String getName() {
         return mName;
+    }
+
+    public int getButtonId() {
+        return mButtonId;
     }
 
     /*public void setName(String name) {
