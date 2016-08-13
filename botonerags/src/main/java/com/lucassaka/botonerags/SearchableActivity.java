@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -47,6 +48,15 @@ public class SearchableActivity extends ListActivity {
             doMySearch(query);
             MyApplication.getInstance().trackEvent("Otros","Busqueda",query);
         }
+
+        ImageButton ib = (ImageButton) findViewById(R.id.backButton);
+        ib.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               finish();
+            }
+        });
+
 
         ListView lv = (ListView) findViewById(android.R.id.list);
 
