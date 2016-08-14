@@ -49,6 +49,16 @@
 
     <style name="Theme.Dialog" parent="@android:style/Theme.Dialog" />
 
-    <style name="InteractionTheme" parent="android:Theme.NoDisplay">
+    <style name="IntTheme" parent="InteractionTheme.Base">
+    </style>
+
+    <style name="InteractionTheme.Base" parent="MyMaterialTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/buttonLabel</item>
+        <item name="android:itemTextAppearance">@style/MyActionBar.MenuTextStyle</item>
+        <item name="android:itemBackground">@color/white</item>
     </style>
 </resources>

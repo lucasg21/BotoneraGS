@@ -42,7 +42,6 @@ public class SoundInteractionActivity extends AppCompatActivity{
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.InteractionTheme);
         super.onCreate(savedInstanceState);
         Intent interactionIntent = getIntent();
         int soundId = interactionIntent.getIntExtra("soundId",0);

@@ -51,7 +51,7 @@
 
         <activity
             android:name="com.lucassaka.botonerags.SoundInteractionActivity"
->
+            android:theme="@style/IntTheme">
         </activity>
 
         <activity android:name="org.acra.CrashReportDialog"
