@@ -41,7 +41,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.lucassaka.botonerags.SearchableActivity" >
+        <activity android:name="com.lucassaka.botonerags.SearchableActivity"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
