@@ -116,9 +116,25 @@
     <string name="vivajujuy">¡Viva Jujuy!</string>
     <string name="conlareina">Con la reina, la 1</string>
     <string name="checuca">Che cuca</string>
-    <string name="guidoatomar">Guido a tomar</string>
+    <string name="guidoatomar">A tomar la leche</string>
     <string name="pasaporteboliviano">Pasaporte boliviano</string>
     <string name="mundialmessi">Gana un mundial</string>
     <string name="search_hint">¿Como señor?</string>
+    <string name="quetalclemente">Que tal Clemente</string>
+    <string name="holacalo">Hola Calo</string>
+    <string name="buendiajoe">Buen dia Joe</string>
+    <string name="bravo">¡Bravo!</string>
+    <string name="peladito">Peladito igual que yo</string>
+    <string name="marianomores">Mariano Mores</string>
+    <string name="facturando">Como estan facturando</string>
+    <string name="mujerboludo">Mi mujer, boludo</string>
+    <string name="atomarla">A tomar la leche 2</string>
+    <string name="superputa">Superp*ta</string>
+    <string name="risafresco2">Risa del fresco 2</string>
+    <string name="pendejo">Pendejo</string>
+    <string name="explotada">Explotada</string>
+    <string name="inchiwinchi">Inchi winchi</string>
+    <string name="atomarjr">A tomar la leche 3</string>
+    <string name="parapara">Para para para</string>
 
 </resources>

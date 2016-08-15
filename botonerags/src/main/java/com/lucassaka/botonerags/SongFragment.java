@@ -77,7 +77,7 @@ public class SongFragment extends Fragment{
         youtubeBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                final Intent youtubeIntent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.youtube.com/playlist?list=PLrdwfz_zMFwiy7VheEmBM1hYpG8Fy5byG"));
+                final Intent youtubeIntent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.youtube.com/playlist?list=PLRNtpAgdqAT-aPLh_9Pl589wckGTmcsaW"));
                 if(isYoutubeInstalled){
                     MyApplication.getInstance().trackEvent("Cancion", "Play", "Playlist Youtube");
                     youtubeIntent.setPackage("com.google.android.youtube");

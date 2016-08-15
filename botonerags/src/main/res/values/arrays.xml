@@ -97,6 +97,22 @@
         <item>@id/button94</item>
         <item>@id/button95</item>
         <item>@id/button96</item>
+        <item>@id/button97</item>
+        <item>@id/button98</item>
+        <item>@id/button99</item>
+        <item>@id/button100</item>
+        <item>@id/button101</item>
+        <item>@id/button102</item>
+        <item>@id/button103</item>
+        <item>@id/button104</item>
+        <item>@id/button105</item>
+        <item>@id/button106</item>
+        <item>@id/button107</item>
+        <item>@id/button108</item>
+        <item>@id/button109</item>
+        <item>@id/button110</item>
+        <item>@id/button111</item>
+        <item>@id/button112</item>
     </integer-array>
 
     <string-array name="labels">
@@ -193,9 +209,25 @@
         <item>¡Viva Jujuy!</item>
         <item>Con la reina, la 1.</item>
         <item>Che cuca</item>
-        <item>Guido, a tomar la leche</item>
+        <item>A tomar la leche Guido</item>
         <item>Pasaporte boliviano</item>
         <item>Gana un mundial Messi</item>
+        <item>Que tal Clemente</item>
+        <item>Hola Calo</item>
+        <item>Buen dia Joe</item>
+        <item>¡Bravo!</item>
+        <item>Peladito igual que yo</item>
+        <item>Mariano Mores</item>
+        <item>Como estan facturando</item>
+        <item>Mi mujer, boludo</item>
+        <item>A tomar la leche Guido 2</item>
+        <item>Superp*ta</item>
+        <item>Risa del fresco 2</item>
+        <item>Pendejo</item>
+        <item>Explotada</item>
+        <item>Inchi winchi</item>
+        <item>Para para para</item>
+        <item>A tomar la leche Guido 3</item>
     </string-array>
 
 
@@ -296,5 +328,21 @@
     <item>@raw/guidotomar</item>
     <item>@raw/pasaporteboliviano</item>
     <item>@raw/mundialmessi</item>
+    <item>@raw/clemente</item>
+    <item>@raw/holacalo</item>
+    <item>@raw/buendiajoe</item>
+    <item>@raw/bravo</item>
+    <item>@raw/peladito</item>
+    <item>@raw/marianomores</item>
+    <item>@raw/facturando</item>
+    <item>@raw/mimujerboludo</item>
+    <item>@raw/guidoatomar</item>
+    <item>@raw/superputa</item>
+    <item>@raw/risafresco2</item>
+    <item>@raw/pendejo</item>
+    <item>@raw/explotada</item>
+    <item>@raw/inchiwinchi</item>
+    <item>@raw/parapara</item>
+    <item>@raw/guidoatomarjr</item>
     </integer-array>
 </resources>
