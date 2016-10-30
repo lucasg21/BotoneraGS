@@ -11,6 +11,7 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
@@ -96,24 +97,33 @@ public class SoundInteractionActivity extends AppCompatActivity{
         String filename = SoundInteractionActivity.this.getResources().getResourceEntryName(audioID) + ".mp3";
         File f = new File(SoundInteractionActivity.this.getExternalFilesDir("audio/"), filename);
 
-        if (!f.exists()) {
-            try {
-                OutputStream out = new FileOutputStream(f);
-                copyFile(in, out);
-                in.close();
-                out.flush();
-                out.close();
-            } catch (FileNotFoundException e) {
-            } catch (IOException e) {
+        try {
+            OutputStream out = new FileOutputStream(f);
+            copyFile(in, out);
+            in.close();
+            out.flush();
+            out.close();
+        } catch (FileNotFoundException e) {
+        } catch (IOException e) {
+        }
+
+        /*String folderPath = Environment.getExternalStorageDirectory() + "/.BotoneraGS";
+        File appFolder = new File(folderPath);
+        File soundFile = new File(folderPath + File.separator + filename);
+        try{
+            if ((appFolder.mkdirs() || appFolder.isDirectory()) && !soundFile.exists()) {
+                CopyRAWtoSDCard(audioID, path + File.separator + filename);
             }
         }
+        catch (IOException e) {
+            e.printStackTrace();
+        }*/
         if (sharing) {
-
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
 
-            sendIntent.setType("audio/*");
             Uri uri = FileProvider.getUriForFile(SoundInteractionActivity.this, "com.myfileprovider", f);
+            sendIntent.setType("audio/*");
             sendIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             sendIntent.putExtra(Intent.EXTRA_STREAM, uri);
             SoundInteractionActivity.this.startActivity(Intent.createChooser(sendIntent, SoundInteractionActivity.this.getResources().getText(R.string.title_activity_second)));
@@ -196,6 +206,20 @@ public class SoundInteractionActivity extends AppCompatActivity{
         int read;
         while ((read = in.read(buffer)) != -1) {
             out.write(buffer, 0, read);
+        }
+    }
+    private void CopyRAWtoSDCard(int id, String path) throws IOException {
+        InputStream in = getResources().openRawResource(id);
+        FileOutputStream out = new FileOutputStream(path);
+        byte[] buff = new byte[1024];
+        int read = 0;
+        try {
+            while ((read = in.read(buff)) > 0) {
+                out.write(buff, 0, read);
+            }
+        } finally {
+            in.close();
+            out.close();
         }
     }
     private boolean shouldAskPermission(){
