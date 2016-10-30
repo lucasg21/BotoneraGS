@@ -113,6 +113,26 @@
         <item>@id/button110</item>
         <item>@id/button111</item>
         <item>@id/button112</item>
+        <item>@id/button113</item>
+        <item>@id/button114</item>
+        <item>@id/button115</item>
+        <item>@id/button116</item>
+        <item>@id/button117</item>
+        <item>@id/button118</item>
+        <item>@id/button119</item>
+        <item>@id/button120</item>
+        <item>@id/button121</item>
+        <item>@id/button122</item>
+        <item>@id/button123</item>
+        <item>@id/button124</item>
+        <item>@id/button125</item>
+        <item>@id/button126</item>
+        <item>@id/button127</item>
+        <item>@id/button128</item>
+        <item>@id/button129</item>
+        <item>@id/button130</item>
+        <item>@id/button131</item>
+        <item>@id/button132</item>
     </integer-array>
 
     <string-array name="labels">
@@ -228,6 +248,26 @@
         <item>Inchi winchi</item>
         <item>Para para para</item>
         <item>A tomar la leche Guido 3</item>
+        <item>Audio Baby</item>
+        <item>Tu grupo se hunde</item>
+        <item>Siempre numero 2</item>
+        <item>Pastilla optimizar</item>
+        <item>Libertad Nino Bravo</item>
+        <item>No se la chupe</item>
+        <item>No me parece</item>
+        <item>Mucha cancha</item>
+        <item>Leo,a tomar la leche 2</item>
+        <item>Leo para de robar</item>
+        <item>Vegano ACV</item>
+        <item>Virgo de mierda</item>
+        <item>África</item>
+        <item>Guidooo 4</item>
+        <item>Ud es extranjero?</item>
+        <item>Hola culiados</item>
+        <item>Peladito remix</item>
+        <item>Conseguiste al gigolo</item>
+        <item>El gracioso sos vos</item>
+        <item>Bambino V.</item>
     </string-array>
 
 
@@ -344,5 +384,25 @@
     <item>@raw/inchiwinchi</item>
     <item>@raw/parapara</item>
     <item>@raw/guidoatomarjr</item>
+    <item>@raw/audiodebaby</item>
+    <item>@raw/grupohunde</item>
+    <item>@raw/numero2</item>
+    <item>@raw/viejopastilla</item>
+    <item>@raw/libertadnino</item>
+    <item>@raw/noselachupe</item>
+    <item>@raw/nomeparece</item>
+    <item>@raw/muchacancha</item>
+    <item>@raw/leotomar2</item>
+    <item>@raw/leorobar</item>
+    <item>@raw/veganoacv</item>
+    <item>@raw/virgodemierda</item>
+    <item>@raw/africa</item>
+    <item>@raw/atomarla2</item>
+    <item>@raw/extranjero</item>
+    <item>@raw/holaculiados</item>
+    <item>@raw/peladitoremix</item>
+    <item>@raw/elgigolo</item>
+    <item>@raw/elgracioso</item>
+    <item>@raw/bambino</item>
     </integer-array>
 </resources>
