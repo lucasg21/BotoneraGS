@@ -31,6 +31,8 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_provider_paths" />
         </provider>
+        <provider android:name=".SuggestionProvider"
+            android:authorities="com.lucassaka.botonerags.SuggestionProvider" />
         <activity
             android:name="com.lucassaka.botonerags.MainActivity"
             android:launchMode="singleTop"

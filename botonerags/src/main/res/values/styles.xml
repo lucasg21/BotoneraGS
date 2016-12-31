@@ -2,6 +2,7 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="searchViewStyle">@style/MySearchViewStyle</item>
         <!-- Customize your theme here. -->
     </style>
 
@@ -60,5 +61,9 @@
         <item name="colorAccent">@color/buttonLabel</item>
         <item name="android:itemTextAppearance">@style/MyActionBar.MenuTextStyle</item>
         <item name="android:itemBackground">@color/white</item>
+    </style>
+
+    <style name="MySearchViewStyle" parent="Widget.AppCompat.Light.SearchView">
+        <item name="suggestionRowLayout">@layout/suggestedrow</item>
     </style>
 </resources>
