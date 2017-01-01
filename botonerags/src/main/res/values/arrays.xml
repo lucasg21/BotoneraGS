@@ -133,6 +133,18 @@
         <item>@id/button130</item>
         <item>@id/button131</item>
         <item>@id/button132</item>
+        <item>@id/button133</item>
+        <item>@id/button134</item>
+        <item>@id/button135</item>
+        <item>@id/button136</item>
+        <item>@id/button137</item>
+        <item>@id/button138</item>
+        <item>@id/button139</item>
+        <item>@id/button140</item>
+        <item>@id/button141</item>
+        <item>@id/button142</item>
+        <item>@id/button143</item>
+        <item>@id/button144</item>
     </integer-array>
 
     <string-array name="labels">
@@ -268,6 +280,18 @@
         <item>Conseguiste al gigolo</item>
         <item>El gracioso sos vos</item>
         <item>Bambino V.</item>
+        <item>Bochorno</item>
+        <item>Bochorno 2</item>
+        <item>Julian completo</item>
+        <item>Rianse muchachos</item>
+        <item>No sabe leer</item>
+        <item>Lo cago a trompadas</item>
+        <item>Yo tuve un perro</item>
+        <item>Joe Fernandez</item>
+        <item>Haydee de Pompeya</item>
+        <item>Callate p*to</item>
+        <item>Grito Barilari</item>
+        <item>Bambino 2</item>
     </string-array>
 
 
@@ -404,5 +428,17 @@
     <item>@raw/elgigolo</item>
     <item>@raw/elgracioso</item>
     <item>@raw/bambino</item>
+    <item>@raw/bochorno</item>
+    <item>@raw/bochorno2</item>
+    <item>@raw/juliancompleto</item>
+    <item>@raw/riansemuchachos</item>
+    <item>@raw/nosabeleer</item>
+    <item>@raw/massatrompadas</item>
+    <item>@raw/perrocongoja</item>
+    <item>@raw/joefernandez</item>
+    <item>@raw/haydee</item>
+    <item>@raw/callateputo</item>
+    <item>@raw/barilari</item>
+    <item>@raw/bambino2</item>
     </integer-array>
 </resources>
