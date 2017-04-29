@@ -145,6 +145,10 @@
         <item>@id/button142</item>
         <item>@id/button143</item>
         <item>@id/button144</item>
+        <item>@id/button145</item>
+        <item>@id/button146</item>
+        <item>@id/button147</item>
+        <item>@id/button148</item>
     </integer-array>
 
     <string-array name="labels">
@@ -292,6 +296,10 @@
         <item>Callate p*to</item>
         <item>Grito Barilari</item>
         <item>Bambino 2</item>
+        <item>Bad hombres</item>
+        <item>Es de Peron</item>
+        <item>Porque cortaste maricon</item>
+        <item>Ja, que crack</item>
     </string-array>
 
 
@@ -440,5 +448,9 @@
     <item>@raw/callateputo</item>
     <item>@raw/barilari</item>
     <item>@raw/bambino2</item>
+    <item>@raw/badhombres</item>
+    <item>@raw/esdeperon</item>
+    <item>@raw/porquecortaste</item>
+    <item>@raw/jaquecrack</item>
     </integer-array>
 </resources>
