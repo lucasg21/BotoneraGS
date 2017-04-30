@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 
 public class SoundFragment extends android.support.v4.app.Fragment {
 
@@ -24,16 +26,23 @@ public class SoundFragment extends android.support.v4.app.Fragment {
         // Inflate the layout for this fragment
         View buttonsView= inflater.inflate(R.layout.activity_buttons, container, false);
 
+        // Main component of the buttons view
+        TableLayout soundsTable = (TableLayout) buttonsView.findViewById(R.id.buttonsTable);
+        TableRow buttonRow = (TableRow) inflater.inflate(R.layout.buttonrow, null);
+
         mSoundPlayer = new SoundPlayer(this.getContext());
         final Sound[] soundArray = SoundStore.getSounds(this.getContext());
 
-        for(Sound s:soundArray){
-            Button aButton;
-            aButton=(Button) buttonsView.findViewById(s.getButtonId());
-            aButton.setLongClickable(true);
-            this.setClickListener(aButton,s);
-            this.setLongClickListener(aButton,s);
+        for(int i=0; i < soundArray.length; i += 2){
+            Sound leftButtonSound = soundArray[i];
+            Sound rightButtonSound = soundArray[i+1];
+
+            soundsTable.addView(this.getButtonsRow(leftButtonSound,rightButtonSound,buttonRow));
+
+            //Reset buttonRow template layout
+            buttonRow = (TableRow) inflater.inflate(R.layout.buttonrow,null);
         }
+
         return buttonsView;
     }
 
@@ -56,5 +65,27 @@ public class SoundFragment extends android.support.v4.app.Fragment {
             return true;
             }
         });
+    }
+
+    private TableRow getButtonsRow(Sound leftButtonSound, Sound rightButtonSound, TableRow buttonRow){
+        Button leftButton;
+        Button rightButton;
+
+        leftButton = (Button) buttonRow.findViewById(R.id.leftButtonId);
+        rightButton = (Button) buttonRow.findViewById(R.id.rightButtonId);
+
+        leftButton.setText(leftButtonSound.getName());
+        leftButton.setId(leftButtonSound.getButtonId());
+        leftButton.setLongClickable(true);
+        this.setClickListener(leftButton,leftButtonSound);
+        this.setLongClickListener(leftButton,leftButtonSound);
+
+        rightButton.setText(rightButtonSound.getName());
+        rightButton.setId(rightButtonSound.getButtonId());
+        rightButton.setLongClickable(true);
+        this.setClickListener(rightButton,rightButtonSound);
+        this.setLongClickListener(rightButton,rightButtonSound);
+
+        return buttonRow;
     }
 }
