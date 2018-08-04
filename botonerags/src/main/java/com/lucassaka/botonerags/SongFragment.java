@@ -36,9 +36,10 @@ public class SongFragment extends Fragment{
         final boolean isSpotifyInstalled = isPackageInstalled("com.spotify.music", pm);
         final boolean isYoutubeInstalled = isPackageInstalled("com.google.android.youtube",pm);
 
-        ImageButton spotifyBtn,youtubeBtn;
+        ImageButton spotifyBtn,youtubeBtn,gsSpotifyBtn;
         spotifyBtn=(ImageButton)SongsView.findViewById(R.id.spotifyButton);
         youtubeBtn=(ImageButton)SongsView.findViewById(R.id.youtubebutton);
+        gsSpotifyBtn=(ImageButton)SongsView.findViewById(R.id.gsSpotifyBtn);
         spotifyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,7 +78,28 @@ public class SongFragment extends Fragment{
                 }
             }
         });
-
+        gsSpotifyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (isSpotifyInstalled) {
+                    MyApplication.getInstance().trackEvent("Cancion", "Play", "Usuario GS Spotify");
+                    final Intent intentgsplaylist = new Intent(MediaStore.INTENT_ACTION_MEDIA_PLAY_FROM_SEARCH);
+                    intentgsplaylist.setData(Uri.parse("spotify:user:gentesexyradio"));
+                    intentgsplaylist.setPackage("com.spotify.music");
+                    startActivity(intentgsplaylist);
+                }
+                else{
+                    MyApplication.getInstance().trackEvent("Cancion", "Play", "Spotify uninstalled");
+                    Toast.makeText(getContext(),"Instala Spotify para poder escuchar la playlist",Toast.LENGTH_LONG).show();
+                    final String appPackageName = "com.spotify.music";
+                    try {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                    } catch (android.content.ActivityNotFoundException anfe) {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + appPackageName)));
+                    }
+                }
+            }
+        });
         return SongsView;
     }
 

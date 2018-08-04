@@ -13,10 +13,12 @@
         android:padding="5dp"
         android:adjustViewBounds="false"
         android:cropToPadding="true"
+        android:layout_marginTop="47dp"
+        android:layout_marginRight="145dp"
+        android:layout_marginEnd="145dp"
         android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="50dp" />
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,7 +35,33 @@
         android:src="@drawable/ic_youtube"
         android:id="@+id/youtubebutton"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:layout_below="@+id/spotifyButton"
+        android:layout_alignBottom="@+id/spotifyButton"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginLeft="111dp"
+        android:layout_marginStart="111dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/gsradiospotify"
+        android:textStyle="normal"
+        android:id="@+id/textView2"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_below="@+id/youtubebutton"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_spotify_logo"
+        android:id="@+id/gsSpotifyBtn"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="5dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="true"
+        android:layout_below="@+id/textView2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 

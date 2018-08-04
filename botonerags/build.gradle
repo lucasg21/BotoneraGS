@@ -4,10 +4,10 @@ apply plugin: 'android-apt'
 android {
     signingConfigs {
         config {
-            keyAlias System.getenv("KEY_ALIAS")
-            keyPassword System.getenv("KEY_PASSWORD")
-            storeFile file(System.getenv("KEYSTORE"))
-            storePassword System.getenv("KEYSTORE_PASSWORD")
+            keyAlias 'SakaKey'
+            keyPassword 'sakatuki21593'
+            storePassword 'sakatuki21593'
+            storeFile file('F:/Users/Lucas/Desktop/Audios GS/keystore/android.jks')
         }
     }
     compileSdkVersion 23
@@ -16,18 +16,18 @@ android {
         applicationId "com.lucassaka.botonerags"
         minSdkVersion 10
         targetSdkVersion 23
-        versionCode 11
-        versionName "2.6.0"
+        versionCode 12
+        versionName "2.7.0"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.config
-
         }
         debug {
             debuggable true
+            signingConfig signingConfigs.config
         }
     }
 }
