@@ -191,6 +191,14 @@
         <item>188</item>
         <item>189</item>
         <item>190</item>
+        <item>191</item>
+        <item>192</item>
+        <item>193</item>
+        <item>194</item>
+        <item>195</item>
+        <item>196</item>
+        <item>197</item>
+        <item>198</item>
     </integer-array>
 
     <string-array name="labels">
@@ -384,6 +392,14 @@
         <item>Tito de Villa Luro</item>
         <item>Macri y el viento</item>
         <item>Un señor aleman</item>
+        <item>El diego</item>
+        <item>El diegote</item>
+        <item>Estan engañando a la gente</item>
+        <item>Rial- Me cagaste</item>
+        <item>Rial- Me harte de todos</item>
+        <item>Rial- Provincia</item>
+        <item>Rial- La cdsm a todos</item>
+        <item>Rial- Voy para alla ya</item>
     </string-array>
 
 
@@ -578,5 +594,17 @@
         <item>@raw/titovillaluro</item>
         <item>@raw/macriviento</item>
         <item>@raw/unsenoraleman</item>
+        <item>@raw/eldiego</item>
+        <item>@raw/eldiegote</item>
+        <item>@raw/enganiando</item>
+        <item>@raw/mecagasterial</item>
+        <item>@raw/meharterial</item>
+        <item>@raw/provinciarial</item>
+        <item>@raw/cdsmrial</item>
+        <item>@raw/voyrial</item>
+    </integer-array>
+
+    <integer-array name="groupPicturesIds">
+        <item>@drawable/tresempanadasicon</item>
     </integer-array>
 </resources>
