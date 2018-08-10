@@ -44,6 +44,8 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity{
 
     public final static String TAG = MainActivity.class.getSimpleName();
+    public ViewPager mPager;
+    public ViewPagerAdapter mAdapter;
 
     //private final static boolean DEVELOPER_MODE = false;
     @Override
@@ -64,6 +66,7 @@ public class MainActivity extends AppCompatActivity{
         setSupportActionBar(mToolbar);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        mPager = viewPager;
         setupViewPager(viewPager);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
@@ -172,22 +175,77 @@ public class MainActivity extends AppCompatActivity{
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new SoundFragment(), "Sonidos");
+        adapter.addFragment(new SoundGroupFragment(), "Sonidos");
         adapter.addFragment(new SongFragment(), "Canciones");
         viewPager.setAdapter(adapter);
+        mAdapter = adapter;
+    }
+
+    public void onBackPressed() {
+        if(mPager.getCurrentItem() == 0) {
+            if (mAdapter.getItem(0) instanceof SoundFragment) {
+                ((SoundFragment) mAdapter.getItem(0)).backPressed();
+            }
+            else if (mAdapter.getItem(0) instanceof SoundGroupFragment) {
+                finish();
+            }
+        }
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();
+        private final FragmentManager mFragmentManager;
+        public Fragment mFragmentAtPos0;
+        FirstPageListener listener = new FirstPageListener();
+
+        private final class FirstPageListener implements
+                FirstPageFragmentListener {
+            public void onSwitchToNextFragment(int groupId) {
+                mFragmentManager.beginTransaction().remove(mFragmentAtPos0)
+                        .commit();
+                if (mFragmentAtPos0 instanceof SoundGroupFragment){
+                    mFragmentAtPos0 = SoundFragment.newInstance(groupId, listener);
+                }else{ // Instance of NextFragment
+                    mFragmentAtPos0 = new SoundGroupFragment(listener);
+                }
+                notifyDataSetChanged();
+            }
+        }
+
 
         public ViewPagerAdapter(FragmentManager manager) {
             super(manager);
+            mFragmentManager = manager;
         }
 
         @Override
         public Fragment getItem(int position) {
-            return mFragmentList.get(position);
+            switch (position) {
+                case 0: // Fragment # 0
+                    if (mFragmentAtPos0 == null)
+                    {
+                        mFragmentAtPos0 = new SoundGroupFragment(listener);
+                    }
+                    return mFragmentAtPos0;
+
+                case 1:
+                    return new SongFragment();
+            }
+            return null;
+        }
+
+        @Override
+        public int getItemPosition(Object object) {
+            if (object instanceof SoundGroupFragment &&
+                    mFragmentAtPos0 instanceof SoundFragment) {
+                return POSITION_NONE;
+            }
+            if (object instanceof SoundFragment &&
+                    mFragmentAtPos0 instanceof SoundGroupFragment) {
+                return POSITION_NONE;
+            }
+            return POSITION_UNCHANGED;
         }
 
         @Override

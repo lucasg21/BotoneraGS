@@ -25,18 +25,18 @@ abstract class SoundGroupStore {
     public static SoundGroup[] getSoundGroups(Context context) {
         Resources res = context.getApplicationContext().getResources();
 
-        TypedArray labels = res.obtainTypedArray(R.array.labels);
-        TypedArray ids = res.obtainTypedArray(R.array.ids);
-        TypedArray buttonsIds = res.obtainTypedArray(R.array.buttonsIds);
+        TypedArray labels = res.obtainTypedArray(R.array.groupLabels);
+        TypedArray ids = res.obtainTypedArray(R.array.groupIds);
+        TypedArray buttonsIds = res.obtainTypedArray(R.array.groupButtonsIds);
         TypedArray groupPicturesIds = res.obtainTypedArray(R.array.groupPicturesIds);
 
-        SoundGroup[] sounds = new SoundGroup[labels.length()];
+        SoundGroup[] soundGroups = new SoundGroup[labels.length()];
 
-        for (int i = 0; i < sounds.length; i++) {
-            sounds[i] = new SoundGroup(labels.getString(i),
-                                       ids.getResourceId(i, -1),
-                                       buttonsIds.getResourceId(i,-1),
-                                       groupPicturesIds .getResourceId(i, -1));
+        for (int i = 0; i < soundGroups.length; i++) {
+            soundGroups[i] = new SoundGroup(labels.getString(i),
+                                            groupPicturesIds .getResourceId(i, -1),
+                                            buttonsIds.getInt(i,-1),
+                                            ids.getInt(i, -1));
         }
 
         labels.recycle();
@@ -44,6 +44,6 @@ abstract class SoundGroupStore {
         buttonsIds.recycle();
         groupPicturesIds.recycle();
 
-        return sounds;
+        return soundGroups;
     }
 }

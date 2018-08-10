@@ -20,11 +20,13 @@ public class Sound {
     private final String mName;
     private final int mResourceId;
     private final int mButtonId;
+    private final int groupId;
 
-    public Sound(String name, int resourceId,int buttonId) {
+    public Sound(String name, int resourceId, int buttonId, int groupId) {
         this.mName = name;
         this.mResourceId = resourceId;
         this.mButtonId=buttonId;
+        this.groupId = groupId;
     }
 
     public int getResourceId() {
@@ -42,6 +44,8 @@ public class Sound {
     public int getButtonId() {
         return mButtonId;
     }
+
+    public int getGroupId() { return groupId; }
 
     /*public void setName(String name) {
         this.mName = name;

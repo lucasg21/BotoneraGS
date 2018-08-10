@@ -9,15 +9,39 @@ import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 
+import java.util.ArrayList;
+
 public class SoundFragment extends android.support.v4.app.Fragment {
 
     private SoundPlayer mSoundPlayer;
-    public SoundFragment() {
-        // Required empty public constructor
+    private int groupId;
+    static FirstPageFragmentListener firstPageListener;
+
+    public SoundFragment(FirstPageFragmentListener listener) {
+        firstPageListener = listener;
+    }
+
+    public SoundFragment(){
+
+    }
+
+    public void backPressed() {
+        firstPageListener.onSwitchToNextFragment(groupId);
+    }
+
+    public static SoundFragment newInstance(int groupId, FirstPageFragmentListener listener) {
+        SoundFragment newSoundFragment = new SoundFragment(listener);
+
+        Bundle args = new Bundle();
+        args.putInt("groupId", groupId);
+        newSoundFragment.setArguments(args);
+
+        return newSoundFragment;
     }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.groupId = getArguments().getInt("groupId", 0);
     }
 
     @Override
@@ -28,14 +52,21 @@ public class SoundFragment extends android.support.v4.app.Fragment {
 
         // Main component of the buttons view
         TableLayout soundsTable = (TableLayout) buttonsView.findViewById(R.id.buttonsTable);
+        soundsTable.removeAllViews();
         TableRow buttonRow = (TableRow) inflater.inflate(R.layout.buttonrow, null);
 
         mSoundPlayer = new SoundPlayer(this.getContext());
         final Sound[] soundArray = SoundStore.getSounds(this.getContext());
+        ArrayList<Sound> groupSounds = new ArrayList<>();
+        for(Sound sound: soundArray){
+            if (sound.getGroupId() == this.groupId){
+                groupSounds.add(sound);
+            }
+        }
 
-        for(int i=0; i < soundArray.length; i += 2){
-            Sound leftButtonSound = soundArray[i];
-            Sound rightButtonSound = soundArray[i+1];
+        for(int i=0; i < groupSounds.size(); i += 2){
+            Sound leftButtonSound = groupSounds.get(i);
+            Sound rightButtonSound = groupSounds.get(i+1);
 
             soundsTable.addView(this.getButtonsRow(leftButtonSound,rightButtonSound,buttonRow));
 

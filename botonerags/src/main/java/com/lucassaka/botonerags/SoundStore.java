@@ -28,16 +28,19 @@ abstract class SoundStore {
         TypedArray labels = res.obtainTypedArray(R.array.labels);
         TypedArray ids = res.obtainTypedArray(R.array.ids);
         TypedArray buttonsIds = res.obtainTypedArray(R.array.buttonsIds);
+        TypedArray soundGroupIds = res.obtainTypedArray(R.array.soundGroupIds);
 
         Sound[] sounds = new Sound[labels.length()];
 
         for (int i = 0; i < sounds.length; i++) {
-            sounds[i] = new Sound(labels.getString(i), ids.getResourceId(i, -1),buttonsIds.getResourceId(i,-1));
+            sounds[i] = new Sound(labels.getString(i), ids.getResourceId(i, -1),
+                                  buttonsIds.getInt(i,-1), soundGroupIds.getInt(i,-1));
         }
 
         labels.recycle();
         ids.recycle();
         buttonsIds.recycle();
+        soundGroupIds.recycle();
 
         return sounds;
     }
