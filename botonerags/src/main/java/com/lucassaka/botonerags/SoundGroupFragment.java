@@ -2,7 +2,7 @@ package com.lucassaka.botonerags;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
+import android.support.v4.widget.NestedScrollView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,18 +13,32 @@ import android.widget.TableRow;
 
 public class SoundGroupFragment extends android.support.v4.app.Fragment implements FirstPageFragmentListener {
 
-    static FirstPageFragmentListener firstPageListener;
+    private FirstPageFragmentListener firstPageListener;
+    private int scrollPosition;
 
-    public SoundGroupFragment(){
+    public SoundGroupFragment(){}
 
+    public static SoundGroupFragment newInstance(int scrPos) {
+        SoundGroupFragment newSoundGroupFragment = new SoundGroupFragment();
+
+        Bundle args = new Bundle();
+
+        //args.putSerializable("listener", listener);
+        args.putInt("scrPos", scrPos);
+        newSoundGroupFragment.setArguments(args);
+
+        return newSoundGroupFragment;
     }
 
-    public SoundGroupFragment(FirstPageFragmentListener listener) {
-        firstPageListener = listener;
+    public void setListener(FirstPageFragmentListener listener){
+        this.firstPageListener = listener;
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //this.firstPageListener = (FirstPageFragmentListener) getArguments().getSerializable("listener");
+        this.scrollPosition = getArguments().getInt("scrPos");
     }
 
     @Override
@@ -32,6 +46,9 @@ public class SoundGroupFragment extends android.support.v4.app.Fragment implemen
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View buttonsView= inflater.inflate(R.layout.activity_buttons, container, false);
+
+        final NestedScrollView scrollView = (NestedScrollView) buttonsView.
+                findViewById(R.id.nestedScrollView);
 
         // Main component of the buttons view
         TableLayout groupsTable = (TableLayout) buttonsView.findViewById(R.id.buttonsTable);
@@ -49,6 +66,13 @@ public class SoundGroupFragment extends android.support.v4.app.Fragment implemen
             //Reset buttonRow template layout
             buttonRow = (TableRow) inflater.inflate(R.layout.buttonrow,null);
         }
+
+        scrollView.post(new Runnable() {
+            @Override
+            public void run() {
+                scrollView.scrollTo(0, scrollPosition);
+            }
+        });
 
         return buttonsView;
     }

@@ -29,6 +29,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
@@ -186,18 +187,23 @@ public class MainActivity extends AppCompatActivity{
             if (mAdapter.getItem(0) instanceof SoundFragment) {
                 ((SoundFragment) mAdapter.getItem(0)).backPressed();
             }
-            else if (mAdapter.getItem(0) instanceof SoundGroupFragment) {
+            else if (mAdapter.getItem(0) instanceof SoundGroupFragment ||
+                    mAdapter.getItem(0) instanceof SongFragment)  {
                 finish();
             }
+        }
+        else{
+            finish();
         }
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();
-        private final FragmentManager mFragmentManager;
+        private final transient FragmentManager mFragmentManager;
         public Fragment mFragmentAtPos0;
-        FirstPageListener listener = new FirstPageListener();
+        private int soundGroupScrollPosition;
+        private final transient FirstPageListener listener = new FirstPageListener();
 
         private final class FirstPageListener implements
                 FirstPageFragmentListener {
@@ -205,9 +211,15 @@ public class MainActivity extends AppCompatActivity{
                 mFragmentManager.beginTransaction().remove(mFragmentAtPos0)
                         .commit();
                 if (mFragmentAtPos0 instanceof SoundGroupFragment){
-                    mFragmentAtPos0 = SoundFragment.newInstance(groupId, listener);
+                    NestedScrollView myView = (NestedScrollView) findViewById(R.id.nestedScrollView);
+                    soundGroupScrollPosition =  myView.getScrollY();
+                    SoundFragment newSoundFragment = SoundFragment.newInstance(groupId);
+                    newSoundFragment.setListener(listener);
+                    mFragmentAtPos0 = newSoundFragment;
                 }else{ // Instance of NextFragment
-                    mFragmentAtPos0 = new SoundGroupFragment(listener);
+                    SoundGroupFragment sf = SoundGroupFragment.newInstance(soundGroupScrollPosition);
+                    sf.setListener(listener);
+                    mFragmentAtPos0 = sf;
                 }
                 notifyDataSetChanged();
             }
@@ -225,7 +237,9 @@ public class MainActivity extends AppCompatActivity{
                 case 0: // Fragment # 0
                     if (mFragmentAtPos0 == null)
                     {
-                        mFragmentAtPos0 = new SoundGroupFragment(listener);
+                        SoundGroupFragment sf = SoundGroupFragment.newInstance(0);
+                        sf.setListener(listener);
+                        mFragmentAtPos0 = sf;
                     }
                     return mFragmentAtPos0;
 

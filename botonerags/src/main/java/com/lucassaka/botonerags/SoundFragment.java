@@ -11,15 +11,11 @@ import android.widget.TableRow;
 
 import java.util.ArrayList;
 
-public class SoundFragment extends android.support.v4.app.Fragment {
+public class SoundFragment extends android.support.v4.app.Fragment{
 
     private SoundPlayer mSoundPlayer;
     private int groupId;
-    static FirstPageFragmentListener firstPageListener;
-
-    public SoundFragment(FirstPageFragmentListener listener) {
-        firstPageListener = listener;
-    }
+    private FirstPageFragmentListener firstPageListener;
 
     public SoundFragment(){
 
@@ -29,11 +25,12 @@ public class SoundFragment extends android.support.v4.app.Fragment {
         firstPageListener.onSwitchToNextFragment(groupId);
     }
 
-    public static SoundFragment newInstance(int groupId, FirstPageFragmentListener listener) {
-        SoundFragment newSoundFragment = new SoundFragment(listener);
+    public static SoundFragment newInstance(int groupId) {
+        SoundFragment newSoundFragment = new SoundFragment();
 
         Bundle args = new Bundle();
         args.putInt("groupId", groupId);
+        //args.putSerializable("listener", listener);
         newSoundFragment.setArguments(args);
 
         return newSoundFragment;
@@ -42,6 +39,11 @@ public class SoundFragment extends android.support.v4.app.Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.groupId = getArguments().getInt("groupId", 0);
+        // this.firstPageListener = (FirstPageFragmentListener) getArguments().getSerializable("listener");
+    }
+
+    public void setListener(FirstPageFragmentListener listener){
+        this.firstPageListener = listener;
     }
 
     @Override
@@ -66,7 +68,10 @@ public class SoundFragment extends android.support.v4.app.Fragment {
 
         for(int i=0; i < groupSounds.size(); i += 2){
             Sound leftButtonSound = groupSounds.get(i);
-            Sound rightButtonSound = groupSounds.get(i+1);
+            Sound rightButtonSound = null;
+            if (i+1 < groupSounds.size()){
+                rightButtonSound = groupSounds.get(i+1);
+            }
 
             soundsTable.addView(this.getButtonsRow(leftButtonSound,rightButtonSound,buttonRow));
 
@@ -111,11 +116,16 @@ public class SoundFragment extends android.support.v4.app.Fragment {
         this.setClickListener(leftButton,leftButtonSound);
         this.setLongClickListener(leftButton,leftButtonSound);
 
-        rightButton.setText(rightButtonSound.getName());
-        rightButton.setId(rightButtonSound.getButtonId());
-        rightButton.setLongClickable(true);
-        this.setClickListener(rightButton,rightButtonSound);
-        this.setLongClickListener(rightButton,rightButtonSound);
+        if (rightButtonSound != null){
+            rightButton.setText(rightButtonSound.getName());
+            rightButton.setId(rightButtonSound.getButtonId());
+            rightButton.setLongClickable(true);
+            this.setClickListener(rightButton,rightButtonSound);
+            this.setLongClickListener(rightButton,rightButtonSound);
+        }
+        else{
+            rightButton.setVisibility(View.INVISIBLE);
+        }
 
         return buttonRow;
     }

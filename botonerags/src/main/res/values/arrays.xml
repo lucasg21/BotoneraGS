@@ -199,6 +199,24 @@
         <item>196</item>
         <item>197</item>
         <item>198</item>
+        <item>199</item>
+        <item>200</item>
+        <item>201</item>
+        <item>202</item>
+        <item>203</item>
+        <item>204</item>
+        <item>205</item>
+        <item>206</item>
+        <item>207</item>
+        <item>208</item>
+        <item>209</item>
+        <item>210</item>
+        <item>211</item>
+        <item>212</item>
+        <item>213</item>
+        <item>214</item>
+        <item>215</item>
+        <item>216</item>
     </integer-array>
 
     <string-array name="labels">
@@ -229,7 +247,7 @@
         <item>No te aguanto</item>
         <item>Callate, boludo pelotudo</item>
         <item>Se pueden ver que son negras</item>
-        <item>Fresco - Negro</item>
+        <item>Negro</item>
         <item>Me vuelvo loco</item>
         <item>Pelotudo</item>
         <item>Las fiestas..</item>
@@ -246,7 +264,7 @@
         <item>Jugando con mi enfermedad</item>
         <item>Sabina corre</item>
         <item>A la papa</item>
-        <item>Risa del fresco</item>
+        <item>Risa 1</item>
         <item>Audio de Joe</item>
         <item>Son un balsamo</item>
         <item>Por las entradas</item>
@@ -308,7 +326,7 @@
         <item>Mi mujer, boludo</item>
         <item>A tomar la leche Guido 2</item>
         <item>Superp*ta</item>
-        <item>Risa del fresco 2</item>
+        <item>Risa 2</item>
         <item>Pendejo</item>
         <item>Explotada</item>
         <item>Inchi winchi</item>
@@ -367,7 +385,7 @@
         <item>Uruguay Serafo</item>
         <item>Uruguay Serafo 2</item>
         <item>La empieza a fumar</item>
-        <item>C. de mi madre - Fresco</item>
+        <item>C. de mi madre</item>
         <item>Fa, mono</item>
         <item>Fa, ñeri</item>
         <item>Uoff</item>
@@ -394,12 +412,30 @@
         <item>Un señor aleman</item>
         <item>El diego</item>
         <item>El diegote</item>
-        <item>Estan engañando a la gente</item>
-        <item>Rial- Me cagaste</item>
-        <item>Rial- Me harte de todos</item>
-        <item>Rial- Provincia</item>
-        <item>Rial- La cdsm a todos</item>
-        <item>Rial- Voy para alla ya</item>
+        <item>Esta engañando a la gente</item>
+        <item>Me cagaste</item>
+        <item>Me harte de todo</item>
+        <item>Provincia de mierda</item>
+        <item>La cdsm a todos</item>
+        <item>Voy para alla ya</item>
+        <item>Rica rica</item>
+        <item>Amarga</item>
+        <item>Ay pero que lindo</item>
+        <item>Basta callenlo</item>
+        <item>Que lo cumplas feliz</item>
+        <item>DNI de mi nieta</item>
+        <item>Es un maricon</item>
+        <item>Risa 3</item>
+        <item>Giles los que no vienen</item>
+        <item>Guido</item>
+        <item>Lenny Kravitz</item>
+        <item>Me emocioné</item>
+        <item>No se tocan esos temas</item>
+        <item>La sonrisa es pintada</item>
+        <item>Pelotudo hablando</item>
+        <item>Pierna ortopedica</item>
+        <item>Sueño con mi marido</item>
+        <item>Tiros del punto penal</item>
     </string-array>
 
 
@@ -602,226 +638,326 @@
         <item>@raw/provinciarial</item>
         <item>@raw/cdsmrial</item>
         <item>@raw/voyrial</item>
+        <item>@raw/ricarica</item>
+        <item>@raw/amarga</item>
+        <item>@raw/ayquelindo</item>
+        <item>@raw/callenlo</item>
+        <item>@raw/cumplecfk</item>
+        <item>@raw/dninieta</item>
+        <item>@raw/esunmaricon</item>
+        <item>@raw/frescorisa3</item>
+        <item>@raw/giles</item>
+        <item>@raw/guido</item>
+        <item>@raw/lennykravitz</item>
+        <item>@raw/meemocione</item>
+        <item>@raw/nosetocan</item>
+        <item>@raw/payaso</item>
+        <item>@raw/pelotudohablando</item>
+        <item>@raw/piernaortopedica</item>
+        <item>@raw/sueniodelmarido</item>
+        <item>@raw/tirospenal</item>
     </integer-array>
 
     <integer-array name="soundGroupIds">
+        <item>15</item>
+        <item>15</item>
+        <item>15</item>
+        <item>15</item>
+        <item>6</item>
+        <item>6</item>
+        <item>4</item>
+        <item>6</item>
+        <item>6</item>
+        <item>16</item>
+        <item>16</item>
+        <item>16</item>
+        <item>14</item>
+        <item>14</item>
+        <item>14</item>
+        <item>12</item>
+        <item>12</item>
+        <item>12</item>
+        <item>12</item>
+        <item>12</item>
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+        <item>12</item>
+        <item>5</item>
+        <item>5</item>
+        <item>5</item>
         <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>2</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>2</item>
-        <item>1</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>1</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>1</item>
-        <item>2</item>
-        <item>2</item>
-        <item>2</item>
-        <item>1</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>1</item>
-        <item>2</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>1</item>
-        <item>2</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
+        <item>5</item>
         <item>1</item>
-        <item>2</item>
-        <item>1</item>
-        <item>2</item>
+        <item>7</item>
         <item>1</item>
-        <item>2</item>
         <item>1</item>
-        <item>2</item>
+        <item>6</item>
         <item>1</item>
         <item>1</item>
-        <item>2</item>
         <item>1</item>
         <item>2</item>
         <item>1</item>
+        <item>11</item>
+        <item>7</item>
+        <item>5</item>
         <item>2</item>
         <item>1</item>
-        <item>2</item>
         <item>1</item>
-        <item>2</item>
+        <item>7</item>
         <item>1</item>
-        <item>2</item>
+        <item>12</item>
+        <item>12</item>
+        <item>13</item>
+        <item>7</item>
+        <item>5</item>
+        <item>5</item>
+        <item>5</item>
         <item>1</item>
+        <item>5</item>
+        <item>7</item>
+        <item>12</item>
+        <item>12</item>
         <item>1</item>
-        <item>2</item>
-        <item>2</item>
+        <item>6</item>
+        <item>12</item>
+        <item>12</item>
         <item>1</item>
+        <item>11</item>
+        <item>12</item>
+        <item>14</item>
         <item>2</item>
-        <item>2</item>
+        <item>14</item>
+        <item>14</item>
+        <item>12</item>
         <item>1</item>
+        <item>12</item>
+        <item>12</item>
         <item>2</item>
-        <item>1</item>
+        <item>12</item>
+        <item>14</item>
+        <item>12</item>
+        <item>12</item>
+        <item>12</item>
+        <item>12</item>
+        <item>7</item>
+        <item>5</item>
+        <item>12</item>
+        <item>5</item>
+        <item>7</item>
+        <item>12</item>
+        <item>12</item>
+        <item>12</item>
+        <item>7</item>
+        <item>2</item>
+        <item>1</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+        <item>11</item>
+        <item>2</item>
+        <item>6</item>
+        <item>2</item>
+        <item>12</item>
+        <item>5</item>
+        <item>12</item>
+        <item>12</item>
+        <item>11</item>
+        <item>13</item>
+        <item>2</item>
+        <item>12</item>
+        <item>12</item>
+        <item>12</item>
+        <item>1</item>
+        <item>1</item>
+        <item>12</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>11</item>
+        <item>14</item>
+        <item>2</item>
+        <item>6</item>
+        <item>12</item>
+        <item>1</item>
+        <item>2</item>
+        <item>6</item>
+        <item>1</item>
+        <item>3</item>
+        <item>3</item>
+        <item>12</item>
+        <item>13</item>
+        <item>13</item>
+        <item>7</item>
+        <item>1</item>
+        <item>2</item>
+        <item>1</item>
+        <item>7</item>
+        <item>14</item>
+        <item>1</item>
+        <item>7</item>
+        <item>7</item>
+        <item>6</item>
+        <item>5</item>
+        <item>17</item>
+        <item>17</item>
+        <item>17</item>
+        <item>17</item>
+        <item>17</item>
+        <item>17</item>
+        <item>17</item>
+        <item>17</item>
+        <item>17</item>
+        <item>17</item>
+        <item>8</item>
+        <item>8</item>
+        <item>17</item>
+        <item>17</item>
+        <item>17</item>
+        <item>17</item>
+        <item>1</item>
+        <item>5</item>
+        <item>12</item>
+        <item>12</item>
+        <item>11</item>
+        <item>11</item>
+        <item>7</item>
+        <item>7</item>
+        <item>7</item>
+        <item>7</item>
+        <item>7</item>
+        <item>7</item>
+        <item>7</item>
+        <item>9</item>
+        <item>9</item>
+        <item>18</item>
+        <item>18</item>
+        <item>18</item>
+        <item>18</item>
+        <item>18</item>
+        <item>18</item>
+        <item>18</item>
+        <item>18</item>
+        <item>1</item>
+        <item>7</item>
+        <item>7</item>
+        <item>13</item>
+        <item>13</item>
+        <item>3</item>
+        <item>10</item>
+        <item>10</item>
+        <item>10</item>
+        <item>10</item>
+        <item>10</item>
+        <item>4</item>
+        <item>4</item>
+        <item>11</item>
+        <item>11</item>
+        <item>7</item>
+        <item>1</item>
+        <item>12</item>
+        <item>5</item>
+        <item>12</item>
+        <item>2</item>
+        <item>12</item>
+        <item>11</item>
         <item>2</item>
         <item>1</item>
-        <item>2</item>
-        <item>2</item>
         <item>1</item>
         <item>1</item>
-        <item>2</item>
         <item>1</item>
-        <item>2</item>
         <item>1</item>
     </integer-array>
 
     <string-array name="groupLabels">
-        <item>Contestador</item>
+        <item>Mensajes</item>
+        <item>Gente Sexy</item>
+        <item>Es un bochorno</item>
+        <item>Mira Julio</item>
+        <item>El Fresco</item>
+        <item>Tangalanga</item>
+        <item>Politica</item>
+        <item>Tano Pasman</item>
+        <item>Boca LCDTM</item>
+        <item>Rial</item>
         <item>Oyentes</item>
+        <item>Varios</item>
+        <item>Diego</item>
+        <item>Tres Empanadas</item>
+        <item>Mareco</item>
+        <item>Samid</item>
+        <item>Serafo</item>
+        <item>Sra Bisman</item>
     </string-array>
 
     <integer-array name="groupIds">
         <item>1</item>
         <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
     </integer-array>
 
     <integer-array name="groupButtonsIds">
         <item>1</item>
         <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
     </integer-array>
 
     <integer-array name="groupPicturesIds">
-        <item>@drawable/tresempanadasicon</item>
-        <item>@drawable/ic_spotify_logo</item>
+        <item>@drawable/ic_mensajes</item>
+        <item>@drawable/ic_gentesexy</item>
+        <item>@drawable/ic_bochorno</item>
+        <item>@drawable/ic_dostizas</item>
+        <item>@drawable/ic_fresco</item>
+        <item>@drawable/ic_tangalanga</item>
+        <item>@drawable/ic_politica</item>
+        <item>@drawable/ic_pasman</item>
+        <item>@drawable/ic_bocalcdtm</item>
+        <item>@drawable/ic_rial</item>
+        <item>@drawable/ic_oyentes</item>
+        <item>@drawable/ic_varios</item>
+        <item>@drawable/ic_diego</item>
+        <item>@drawable/ic_tresempanadas</item>
+        <item>@drawable/ic_mareco</item>
+        <item>@drawable/ic_samid</item>
+        <item>@drawable/ic_serafo</item>
+        <item>@drawable/ic_drabisman</item>
     </integer-array>
 </resources>
