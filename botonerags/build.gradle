@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'android-apt'
 
 android {
     signingConfigs {
@@ -7,15 +6,14 @@ android {
             keyAlias 'SakaKey'
             keyPassword 'sakatuki21593'
             storePassword 'sakatuki21593'
-            storeFile file('F:/Users/Lucas/Desktop/Audios GS/keystore/android.jks')
+            storeFile file('../keystore/android.jks')
         }
     }
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    compileSdkVersion 28
     defaultConfig {
         applicationId "com.lucassaka.botonerags"
-        minSdkVersion 10
-        targetSdkVersion 23
+        minSdkVersion 26
+        targetSdkVersion 28
         versionCode 12
         versionName "2.7.0"
     }
@@ -37,13 +35,13 @@ android {
 
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.android.support:design:23.1.1'
-    compile 'com.google.android.gms:play-services-ads:8.4.0'
-    compile 'com.kobakei:ratethisapp:0.0.4'
-    compile 'ch.acra:acra:4.6.2'
-    compile 'com.google.android.gms:play-services-analytics:8.4.0'
-    compile 'com.github.hotchemi:permissionsdispatcher:2.0.7'
-    apt 'com.github.hotchemi:permissionsdispatcher-processor:2.0.7'
+    // compile fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:23.1.1'
+    implementation 'com.android.support:design:23.1.1'
+    api 'com.google.android.gms:play-services-ads:8.4.0'
+    implementation 'com.kobakei:ratethisapp:0.0.4'
+    implementation 'ch.acra:acra:4.6.2'
+    implementation 'com.google.android.gms:play-services-analytics:8.4.0'
+    implementation 'com.github.hotchemi:permissionsdispatcher:2.0.7'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.0.7'
 }

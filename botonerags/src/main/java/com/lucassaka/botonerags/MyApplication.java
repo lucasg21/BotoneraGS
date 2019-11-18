@@ -2,7 +2,6 @@ package com.lucassaka.botonerags;
 
 import android.app.Application;
 
-import org.acra.ACRA;
 import org.acra.ReportField;
 import org.acra.ReportingInteractionMode;
 import org.acra.annotation.ReportsCrashes;
@@ -36,6 +35,7 @@ import com.google.android.gms.analytics.Tracker;
 public class MyApplication extends Application{
 
     private static final String TAG = MyApplication.class.getSimpleName();
+    private static GoogleAnalytics sAnalytics;
     private Tracker mTracker;
     private static MyApplication mInstance;
 
@@ -43,7 +43,7 @@ public class MyApplication extends Application{
         if (mTracker == null) {
             GoogleAnalytics analytics = GoogleAnalytics.getInstance(this);
             // To enable debug logging use: adb shell setprop log.tag.GAv4 DEBUG
-            mTracker = analytics.newTracker(R.string.global_tracker);
+            mTracker = sAnalytics.newTracker(R.xml.global_tracker);
         }
         return mTracker;
     }
@@ -78,10 +78,11 @@ public class MyApplication extends Application{
         }
     }
     public void trackEvent(String category, String action, String label) {
-        Tracker t = getGoogleAnalyticsTracker();
+        Tracker t = this.getDefaultTracker();
 
         // Build and send an Event.
-        t.send(new HitBuilders.EventBuilder().setCategory(category).setAction(action).setLabel(label).build());
+        t.send(new HitBuilders.EventBuilder().setCategory(category).setAction(action).setLabel(
+                label).build());
     }
 
 
@@ -89,13 +90,11 @@ public class MyApplication extends Application{
         AnalyticsTrackers analyticsTrackers = AnalyticsTrackers.getInstance();
         return analyticsTrackers.get(AnalyticsTrackers.Target.APP);
     }
-    @Override
+
     public void onCreate() {
         super.onCreate();
-        mInstance=this;
-        // The following line triggers the initialization of ACRA
-        ACRA.init(this);
-        AnalyticsTrackers.initialize(this);
-        AnalyticsTrackers.getInstance().get(AnalyticsTrackers.Target.APP);
+        mInstance = this;
+
+        sAnalytics = GoogleAnalytics.getInstance(this);
     }
 }

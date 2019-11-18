@@ -30,15 +30,15 @@ public class SearchableActivity extends ListActivity {
 
         mSoundPlayer = new SoundPlayer(this.getApplicationContext());
 
-        AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .addTestDevice("395F39CE8F56D34CBE41785D5F12B2C7")
-                .addTestDevice("7C0CAD91C1F4E71ABF3D62F98FCD84D7") //S6 6.0 en Genymotion
-                .addTestDevice("6EC3AE8CA7007D6A0C8F4D37A740630C")
-                .build();
-
-        mAdView.loadAd(adRequest);
+//        AdView mAdView = (AdView) findViewById(R.id.adView);
+//        AdRequest adRequest = new AdRequest.Builder()
+//                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+//                .addTestDevice("395F39CE8F56D34CBE41785D5F12B2C7")
+//                .addTestDevice("7C0CAD91C1F4E71ABF3D62F98FCD84D7") //S6 6.0 en Genymotion
+//                .addTestDevice("6EC3AE8CA7007D6A0C8F4D37A740630C")
+//                .build();
+//
+//        mAdView.loadAd(adRequest);
 
         // Get the intent, verify the action and get the query
         Intent intent = getIntent();
